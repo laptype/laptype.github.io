@@ -2,6 +2,5 @@
 
 
 
-test1
+[链接](https://laptype.github.io/)
 
-test2
