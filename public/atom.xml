@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2021-09-14T12:53:00.972Z</updated>
+  <updated>2021-09-14T13:29:45.281Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>贪吃蛇demo</title>
+    <link href="http://laptype.github.io/2021/09/14/%E8%B4%AA%E5%90%83%E8%9B%87demo/"/>
+    <id>http://laptype.github.io/2021/09/14/%E8%B4%AA%E5%90%83%E8%9B%87demo/</id>
+    <published>2021-09-14T13:03:56.000Z</published>
+    <updated>2021-09-14T13:29:45.281Z</updated>
+    
+    <content type="html"><![CDATA[<body>    <iframe src="\HTML\demo2\demo2.html" width="100%" height="650px" frameborder="1" name="testpage" scrolling="auto">    </iframe></body>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;body&gt;
+    &lt;iframe src=&quot;\HTML\demo2\demo2.html&quot; width=&quot;100%&quot; height=&quot;650px&quot; frameborder=&quot;1&quot; name=&quot;testpage&quot; scrolling=&quot;auto&quot;&gt;
+    &lt;/iframe&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo 页面之间跳转</title>
