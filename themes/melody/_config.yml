@@ -2,30 +2,41 @@
 # Theme color for customize
 # Notice: color value must in double quotes like "#000" or may cause error!
 # ---------------
+theme_color:
+  enable: true
+  main: "#49B1F5"
+  paginator: "#00C4B6"
+  button_hover: "#FF7242"
+  text_selection: "#00C4B6"
+  link_color: "#858585"
+  hr_color: "#A4D8FA"
+  tag_start_color: "#A4D8FA"
+  tag_end_color: "#1B9EF3"
+  header_text_color: "#EEEEEE"
+  footer_text_color: "#EEEEEE"
+
 # theme_color:
-#   enable: true
-#   main: "#49B1F5"
-#   paginator: "#00C4B6"
-#   button_hover: "#FF7242"
-#   text_selection: "#00C4B6"
-#   link_color: "#858585"
-#   hr_color: "#A4D8FA"
-#   tag_start_color: "#A4D8FA"
-#   tag_end_color: "#1B9EF3"
-#   header_text_color: "#EEEEEE"
-#   footer_text_color: "#EEEEEE"
+#   enable: true # or false -> to use the default theme
+#   main: "#000"
+#   paginator: "#000"
+#   button_hover: "#49B1F5"
+#   text_selection: "#000"
+#   link_color: "#000"
+#   hr_color: "#000"
+#   meta_color: "#000"
+#   header_text_color: "#000" # v1.7.0+
+#   footer_text_color: "#000" # v1.7.0+
 
 # Main menu navigation
 menu:
-  # Home: /
-  # Archives: /archives
-  # Tags: /tags
-  # Categories: /categories
-  #XXX: /xxx
-
+  Blog: /
+  Posts: /archives
+  Tags: /tags
+  Categories: /categories
+  demo: /HTML/demo1/demo1.html
 # Favicon
 # ---------------
-favicon: /melody-favicon.ico
+favicon: /bitbug_favicon.ico
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -86,7 +97,7 @@ katex:
 
 # Toggle fireworks (IE >= 10)
 # ---------------
-fireworks: false
+fireworks: true
 
 # Analysis
 # ---------------
@@ -128,7 +139,7 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar:
+avatar: /img/avatar.jpg
 
 top_img: true # false or url of img
 
@@ -148,14 +159,14 @@ toc:
   # number: true
 
 post_copyright:
-  enable: true
+  enable: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/theme-config.html#auto-excerpt
-# auto_excerpt:
-#   enable: false
-#   length: 150
+auto_excerpt:
+  enable: true
+  length: 150
 
 # slide
 # For reveal.js config, see https://github.com/hakimel/reveal.js#configuration
@@ -228,18 +239,18 @@ disqus:
 #   admin:
 
 # valine comment system. https://valine.js.org
-# valine:
-#   enable: false # if you want use valine,please set this value is true
-#   appId:  # leancloud application app id
-#   appKey:  # leancloud application app key
-#   notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
-#   verify: false # valine verify code (true/false)
-#   recordip: false # whether record commentor's ip (true/false)
-#   pageSize: 10 # comment list page size
-#   avatar: mm # gravatar style https://valine.js.org/#/avatar
-#   lang: zh-cn # i18n: zh-cn/en
-#   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
-#   guest_info: nick,mail,link #valine comment header inf
+valine:
+  enable: true # if you want use valine,please set this value is true
+  appId:  kCKaIduHOrwrGgvJupzcrfXA-gzGzoHsz # leancloud application app id
+  appKey:  Fmg7rMLTRQmQpUUGsNNaHDcG # leancloud application app key
+  notify: false # valine mail notify (true/false) https://github.com/xCss/Valine/wiki
+  verify: false # valine verify code (true/false)
+  recordip: false # whether record commentor's ip (true/false)
+  pageSize: 10 # comment list page size
+  avatar: mm # gravatar style https://valine.js.org/#/avatar
+  lang: zh-cn # i18n: zh-cn/en
+  placeholder: leave a comment # valine comment input placeholder(like: Please leave your footprints )
+  guest_info: nick,mail,link #valine comment header inf
 
 # vssue:
   # enable: false # Set to true to enable
@@ -255,9 +266,9 @@ disqus:
 
 # Footer Settings
 # ---------------
-since: 2013
+since: 2021
 
-# footer_custom_text: put custom text directly or put hitokoto to fetch random texts
+footer_custom_text: hitokoto
 
 ICP:
   enable: false

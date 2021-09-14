@@ -1,29 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>lapt</title>
   
+  <subtitle>更好的自己</subtitle>
+  <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
-  <updated>2021-09-14T06:42:52.186Z</updated>
-  <id>http://example.com/</id>
+  <link href="http://laptype.github.io/"/>
+  <updated>2021-09-14T12:53:00.972Z</updated>
+  <id>http://laptype.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Lapt lan</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>记录9-14</title>
-    <link href="http://example.com/2021/09/14/%E8%AE%B0%E5%BD%959-14/"/>
-    <id>http://example.com/2021/09/14/%E8%AE%B0%E5%BD%959-14/</id>
-    <published>2021-09-14T06:38:29.000Z</published>
-    <updated>2021-09-14T06:42:52.186Z</updated>
+    <title>hexo 页面之间跳转</title>
+    <link href="http://laptype.github.io/2021/09/14/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/"/>
+    <id>http://laptype.github.io/2021/09/14/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/</id>
+    <published>2021-09-14T12:48:45.000Z</published>
+    <updated>2021-09-14T12:53:00.972Z</updated>
     
-    <content type="html"><![CDATA[<p>今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下</p><p>主要看的教程：</p><p><a href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p><p><a href="https://www.jianshu.com/p/0b1fccce74e0">https://www.jianshu.com/p/0b1fccce74e0</a></p><img src="/2021/09/14/%E8%AE%B0%E5%BD%959-14/image-20210914144037667.png" alt="image-20210914144037667" style="zoom:50%;"><p>原理就是</p><p><code>hexo d</code>上传到GitHub的是hexo编译之后的文件，不包含源文件</p><p>所以，就新建一个分支，用来保存源文件。</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[文字（页面）](/2021/09/14/page-test/)</span><br></pre></td></tr></table></figure><p>链接格式是：</p><p><code>permalink: :year/:month/:day/:title/</code></p><p>注意要在最前面加 <code>/</code></p><p><code>./</code> 表示当前目录</p><p><code>../</code> 父级目录</p><p><code>/</code> 根目录</p><p><a href="/HTML/demo2/demo2.html">demo</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo中md内置html的操作</title>
+    <link href="http://laptype.github.io/2021/09/14/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://laptype.github.io/2021/09/14/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-09-14T12:00:17.000Z</published>
+    <updated>2021-09-14T12:46:31.789Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚刚实现了一下md内置html的操作<br>想在博客页面内添加html页面套娃</p><p><a href="/2021/09/14/page-test/">实现效果</a></p><img src="https://files.alexhchu.com/2021/09/14/f8a334fd75eea.png" alt="g" title="实现效果" style="zoom:50%;"><p>其实没啥操作，也不知道这操作对不对</p><p>就是像这样把代码一股脑全粘了进去</p><img src="https://files.alexhchu.com/2021/09/14/19f994c922896.png" alt="Snipaste_2021-09-14_20-07-10.png" title="Snipaste_2021-09-14_20-07-10.png" style="zoom:50%;"><p>顺便记录一下修正其中的一个bug：</p><p>就是鼠标监听事件，跟着鼠标移动做动作</p><p>原本代码是这样：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&#x27;mousemove&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">    y = e.pageY,</span><br><span class="line">    len = nBubble.length;</span><br><span class="line">    nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">    <span class="built_in">console</span>.log(x,y);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>放在单独的html文件中没啥问题，可当我放在md中时，鼠标位置出现了偏移现象，原本应该鼠标位置为0，0的点变成了400多，400多</p><p>这是因为canvas不是填充整个页面了，所以不能再使用全部页面的鼠标坐标</p><p>要使用相对鼠标坐标</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&quot;mousemove&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> rect = canvas.getBoundingClientRect();</span><br><span class="line">        <span class="keyword">var</span> x = e.clientX - rect.left * (canvas.width / rect.width);</span><br><span class="line">        <span class="keyword">var</span> y = e.clientY - rect.top * (canvas.height / rect.height);</span><br><span class="line">        <span class="keyword">var</span> len = nBubble.length;</span><br><span class="line">        <span class="comment">// console.log(&quot;x:&quot;+x+&quot;,y:&quot;+y);</span></span><br><span class="line">        nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p><code>getBoundingClientRect()</code> 函数返回属性</p><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>top</td><td>元素上边界距窗口最上边的距离</td></tr><tr><td>left</td><td>元素左边界距窗口最左边的距离</td></tr><tr><td>bottom</td><td>元素下边界距窗口最上边的距离</td></tr><tr><td>right</td><td>元素右边界距窗口最左边的距离</td></tr><tr><td>width</td><td>元素的宽度</td></tr><tr><td>height</td><td>元素的高度</td></tr></tbody></table><p>再使用鼠标坐标减去就行了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;刚刚实现了一下md内置html的操作&lt;br&gt;想在博客页面内添加html页面套娃&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2021/09/14/page-test/&quot;&gt;实现效果&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;https://files.alexhchu.com/2021/09</summary>
+      
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>page_test</title>
+    <link href="http://laptype.github.io/2021/09/14/page-test/"/>
+    <id>http://laptype.github.io/2021/09/14/page-test/</id>
+    <published>2021-09-14T11:22:39.000Z</published>
+    <updated>2021-09-14T12:27:56.647Z</updated>
+    
+    <content type="html"><![CDATA[<p>​                                                                                 </p><span id="more"></span><a name="Anchor"> <head>    <meta charset="UTF-8">    <title>canvas动动球</title>    <style>        body{            margin: 0;        }        .bubble{            background-color: rgb(190, 190, 190);            display: block;        }    </style></head><body><p><canvas class="bubble"></canvas></p><script>        var h = window.innerHeight,            w = window.innerWidth,            nBubble = [];        var canvas = document.getElementsByClassName('bubble')[0],            conT = canvas.getContext('2d');        (function () {            canvas.width = w;            canvas.height = h;            window.onresize = function () {            h = window.innerHeight;            w = window.innerWidth;            canvas.width = w;            canvas.height = h;        }        })();        function Bubble (x,y) {            this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];            if(arguments.length == 0){                this.init();            }else{                this.init(x,y);                            }            this.draw();            this.vX = random(-1,1);            this.vY = random(-1,1);        }        Bubble.prototype = {            init : function (x,y) {              //实现 函数的 overload                if(arguments.length == 0){                    this.x = random(0,w) ;                    this.y = random(0,h);                                    }else{                    this.x = x;                    this.y = y;                }                this.r = random(3,8);                this.color = this.colorData[Math.floor(random(0,5))];            },            draw : function () {                conT.beginPath();                conT.fillStyle = this.color;                conT.arc(this.x,this.y,this.r,0,2*Math.PI);                conT.fill();            },            move : function () {                this.x += this.vX;                this.y +=this.vY;            },            conllisionDect : function () {                if(this.x - this.r < 0 || this.x + this.r > w){                    this.vX = -this.vX;                };                if(this.y - this.r < 0 || this.y + this.r > h){                    this.vY = -this.vY;                }            }        }        creat(200);        window.setInterval(function () {            conT.clearRect(0,0,w,h);            for(var key of nBubble){                key.move();                key.draw();                key.conllisionDect();            }        },1000/60)        // 监听点击事件        canvas.addEventListener("mousemove", function(e) {            getMousePos(canvas, e);        });            function getMousePos(canvas, event) {            var rect = canvas.getBoundingClientRect();            var x = event.clientX - rect.left * (canvas.width / rect.width);            var y = event.clientY - rect.top * (canvas.height / rect.height);            var len = nBubble.length;            // console.log("x:"+x+",y:"+y);            nBubble[len] = new Bubble(x,y);        }            function random(min,max) {            return Math.random() * (max - min) + min;        }        function creat(num) {            for(var i = 0; i< num; i++){                nBubble[i] =  new Bubble();            }        }</script></body></a>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;​                                                                                 &lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录9-14</title>
+    <link href="http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/"/>
+    <id>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</id>
+    <published>2021-09-14T06:38:29.000Z</published>
+    <updated>2021-09-14T10:37:42.497Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下</p><p>主要看的教程：</p><p><a href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p><p><a href="https://www.jianshu.com/p/0b1fccce74e0">https://www.jianshu.com/p/0b1fccce74e0</a></p><img src="/2021/09/14/%E8%AE%B0%E5%BD%959-14/image-20210914144037667.png" alt="image-20210914144037667" style="zoom:50%;"><p>原理就是</p><p><code>hexo d</code>上传到GitHub的是hexo编译之后的文件，不包含源文件</p><p>所以，就新建一个分支，用来保存源文件。</p><p>GIF测试</p><img src="https://files.alexhchu.com/2021/09/14/37a4c15a35d38.gif" alt="gif" title="gif" style="zoom:50%;">]]></content>
     
     
       
@@ -36,14 +101,14 @@
     
     
     
-    <category term="blogs" scheme="http://example.com/tags/blogs/"/>
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/09/14/hello-world/"/>
-    <id>http://example.com/2021/09/14/hello-world/</id>
+    <link href="http://laptype.github.io/2021/09/14/hello-world/"/>
+    <id>http://laptype.github.io/2021/09/14/hello-world/</id>
     <published>2021-09-14T05:48:03.927Z</published>
     <updated>2021-09-14T04:30:45.094Z</updated>
     

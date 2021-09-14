@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="Lapt lan"><meta name="copyright" content="Lapt lan"><title>更好的自己 | lapt</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="lapt" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="author-info"><div class="author-info__avatar text-center"><img src="/img/avatar.jpg"></div><div class="author-info__name text-center">Lapt lan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">5</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">1</span></a></div></div></div><nav class="no-bg" id="nav"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">lapt</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Blog</a><a class="site-page" href="/archives">Posts</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/categories">Categories</a><a class="site-page" href="/HTML/demo1/demo1.html">demo</a></span><span class="pull-right"></span></div><div id="site-info"><div id="site-title">lapt</div><div id="site-sub-title">更好的自己</div></div></nav><div id="content-outer"><div class="layout" id="content-inner"><article id="page"><h1></h1><div class="article-container"><!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas动动球</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.bubble{
+			background-color: rgb(190, 190, 190);
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<canvas class="bubble"></canvas>
+	<script>
+		/*
+			1.将canvas宽高设置的和浏览器一样 
+			   - 注意，获取浏览器的高度  window.innerWidth/innerHeight
+			   - 赋值，可以直接 canvas.width = w; canvas.height = x; 因为canvas本身有width height属性
+			2. oop面向对象编程。每个球都是一个对象，其所有的方法，属性写在其原型链上
+			   - Bubble.prototype.init()  初始化函数，初始化需要确定bubble的x,y 位置 r半径等，用随机数生成大小不一的球;
+			      - 初始化init(x,y) 与 init() 的不同，鼠标跟随要求确定的x,y，随机生成要求随机，实现函数重载 overload解决此问题
+			   - Bubble.prototype.draw()  根据init的位置，半径等，画出图形。 注意canvas上 beginPath()的重要性
+			   - Bubble.prototype.move()  利用定时器进行不断调用，通过改变bubble的x,y，重绘来实现动画效果。注意每次擦除桌布
+			3. 鼠标跟随
+			   - canvas.addEventListener('mousemove',function (e) {})  函数中，记录e.pageX  e.pageY，赋值，绘图
+		*/
+		var h = window.innerHeight,
+			w = window.innerWidth,
+			nBubble = [];
+		var canvas = document.getElementsByClassName('bubble')[0],
+			conT = canvas.getContext('2d');
+		(function () {
+			canvas.width = w;
+			canvas.height = h;
+			window.onresize = function () {
+			h = window.innerHeight;
+			w = window.innerWidth;
+			canvas.width = w;
+			canvas.height = h;
+		}
+		})();
+		function Bubble (x,y) {
+			this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];
+			if(arguments.length == 0){
+				this.init();
+			}else{
+				this.init(x,y);				
+			}
+
+			this.draw();
+			this.vX = random(-1,1);
+			this.vY = random(-1,1);
+		}
+		Bubble.prototype = {
+			init : function (x,y) {              //实现 函数的 overload
+				if(arguments.length == 0){
+					this.x = random(0,w) ;
+					this.y = random(0,h);					
+				}else{
+					this.x = x;
+					this.y = y;
+				}
+				this.r = random(3,8);
+				this.color = this.colorData[Math.floor(random(0,5))];
+			},
+			draw : function () {
+				conT.beginPath();
+				conT.fillStyle = this.color;
+				conT.arc(this.x,this.y,this.r,0,2*Math.PI);
+				conT.fill();
+			},
+			move : function () {
+				this.x += this.vX;
+				this.y +=this.vY;
+			},
+			conllisionDect : function () {
+				if(this.x - this.r < 0 || this.x + this.r > w){
+					this.vX = -this.vX;
+				};
+				if(this.y - this.r < 0 || this.y + this.r > h){
+					this.vY = -this.vY;
+				}
+			}
+		}
+		creat(200);
+		window.setInterval(function () {
+			conT.clearRect(0,0,w,h);
+			for(var key of nBubble){
+				key.move();
+				key.draw();
+				key.conllisionDect();
+			}
+		},1000/60)
+		canvas.addEventListener('mousemove',function (e) {
+			var x = e.pageX,
+				y = e.pageY,
+				len = nBubble.length;
+			nBubble[len] = new Bubble(x,y);
+			console.log(x,y);
+		})
+		function random(min,max) {
+			return Math.random() * (max - min) + min;
+		}
+		function creat(num) {
+			for(var i = 0; i< num; i++){
+				nBubble[i] =  new Bubble();
+			}
+		}
+
+	</script>
+</body>
+</html></div></article><nav id="pagination"><div class="pagination"></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == 'true';
+var verify = 'false' == 'true';
+var record_ip = 'false' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'kCKaIduHOrwrGgvJupzcrfXA-gzGzoHsz',
+  appKey:'Fmg7rMLTRQmQpUUGsNNaHDcG',
+  placeholder:'leave a comment',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2021 By Lapt lan</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_site_uv"><i class="fa fa-user"></i><span id="busuanzi_value_site_uv"></span><span></span></span><span class="footer-separator">|</span><span id="busuanzi_container_site_pv"><i class="fa fa-eye"></i><span id="busuanzi_value_site_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>
