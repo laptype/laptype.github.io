@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2021-09-14T06:42:52.186Z</updated>
+  <updated>2021-09-14T10:33:38.560Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/"/>
     <id>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</id>
     <published>2021-09-14T06:38:29.000Z</published>
-    <updated>2021-09-14T06:42:52.186Z</updated>
+    <updated>2021-09-14T10:33:38.560Z</updated>
     
-    <content type="html"><![CDATA[<p>今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下</p><p>主要看的教程：</p><p><a href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p><p><a href="https://www.jianshu.com/p/0b1fccce74e0">https://www.jianshu.com/p/0b1fccce74e0</a></p><img src="/2021/09/14/%E8%AE%B0%E5%BD%959-14/image-20210914144037667.png" alt="image-20210914144037667" style="zoom:50%;"><p>原理就是</p><p><code>hexo d</code>上传到GitHub的是hexo编译之后的文件，不包含源文件</p><p>所以，就新建一个分支，用来保存源文件。</p>]]></content>
+    <content type="html"><![CDATA[<p>今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下</p><p>主要看的教程：</p><p><a href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p><p><a href="https://www.jianshu.com/p/0b1fccce74e0">https://www.jianshu.com/p/0b1fccce74e0</a></p><img src="/2021/09/14/%E8%AE%B0%E5%BD%959-14/image-20210914144037667.png" alt="image-20210914144037667" style="zoom:50%;"><p>原理就是</p><p><code>hexo d</code>上传到GitHub的是hexo编译之后的文件，不包含源文件</p><p>所以，就新建一个分支，用来保存源文件。</p><p>GIF测试</p><img src="https://files.alexhchu.com/2021/09/14/37a4c15a35d38.gif" alt="676bc66742963606d7017e4af9e10420448dd3bd.gif" title="676bc66742963606d7017e4af9e10420448dd3bd.gif" style="zoom:50%;">]]></content>
     
     
       
