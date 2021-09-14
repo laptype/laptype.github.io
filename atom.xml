@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2021-09-14T10:37:42.497Z</updated>
+  <updated>2021-09-14T12:16:31.695Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo中md内置html的操作</title>
+    <link href="http://laptype.github.io/2021/09/14/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://laptype.github.io/2021/09/14/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-09-14T12:00:17.000Z</published>
+    <updated>2021-09-14T12:16:31.695Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚刚实现了一下md内置html的操作<br>想在博客页面内添加html页面套娃</p><p>实现效果<br><img src="https://files.alexhchu.com/2021/09/14/f8a334fd75eea.png" alt="g" title="实现效果" style="zoom:50%;"></p><p>其实没啥操作，也不知道这操作对不对</p><p>就是像这样把代码一股脑全粘了进去</p><img src="https://files.alexhchu.com/2021/09/14/19f994c922896.png" alt="Snipaste_2021-09-14_20-07-10.png" title="Snipaste_2021-09-14_20-07-10.png" style="zoom:50%;"><p>顺便记录一下修正其中的一个bug：</p><p>就是鼠标监听事件，跟着鼠标移动做动作</p><p>原本代码是这样：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&#x27;mousemove&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">    y = e.pageY,</span><br><span class="line">    len = nBubble.length;</span><br><span class="line">    nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">    <span class="built_in">console</span>.log(x,y);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>放在单独的html文件中没啥问题，可当我放在md中时，鼠标位置出现了偏移现象，原本应该鼠标位置为0，0的点变成了400多，400多</p><p>这是因为canvas不是填充整个页面了，所以不能再使用全部页面的鼠标坐标</p><p>要使用相对鼠标坐标</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&quot;mousemove&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> rect = canvas.getBoundingClientRect();</span><br><span class="line">        <span class="keyword">var</span> x = e.clientX - rect.left * (canvas.width / rect.width);</span><br><span class="line">        <span class="keyword">var</span> y = e.clientY - rect.top * (canvas.height / rect.height);</span><br><span class="line">        <span class="keyword">var</span> len = nBubble.length;</span><br><span class="line">        <span class="comment">// console.log(&quot;x:&quot;+x+&quot;,y:&quot;+y);</span></span><br><span class="line">        nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p><code>getBoundingClientRect()</code> 函数返回属性</p><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>top</td><td>元素上边界距窗口最上边的距离</td></tr><tr><td>left</td><td>元素左边界距窗口最左边的距离</td></tr><tr><td>bottom</td><td>元素下边界距窗口最上边的距离</td></tr><tr><td>right</td><td>元素右边界距窗口最左边的距离</td></tr><tr><td>width</td><td>元素的宽度</td></tr><tr><td>height</td><td>元素的高度</td></tr></tbody></table><p>再使用鼠标坐标减去就行了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;刚刚实现了一下md内置html的操作&lt;br&gt;想在博客页面内添加html页面套娃&lt;/p&gt;
+&lt;p&gt;实现效果&lt;br&gt;&lt;img src=&quot;https://files.alexhchu.com/2021/09/14/f8a334fd75eea.png&quot; alt=&quot;g&quot; title=&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>page_test</title>
+    <link href="http://laptype.github.io/2021/09/14/page-test/"/>
+    <id>http://laptype.github.io/2021/09/14/page-test/</id>
+    <published>2021-09-14T11:22:39.000Z</published>
+    <updated>2021-09-14T12:21:04.091Z</updated>
+    
+    <content type="html"><![CDATA[<p>​                                                                                 </p><span id="more"></span><html lang="en"><head>    <meta charset="UTF-8">    <title>canvas动动球</title>    <style>        body{            margin: 0;        }        .bubble{            background-color: rgb(190, 190, 190);            display: block;        }    </style></head><body><p><canvas class="bubble"></canvas></p><script>        var h = window.innerHeight,            w = window.innerWidth,            nBubble = [];        var canvas = document.getElementsByClassName('bubble')[0],            conT = canvas.getContext('2d');        (function () {            canvas.width = w;            canvas.height = h;            window.onresize = function () {            h = window.innerHeight;            w = window.innerWidth;            canvas.width = w;            canvas.height = h;        }        })();        function Bubble (x,y) {            this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];            if(arguments.length == 0){                this.init();            }else{                this.init(x,y);                            }            this.draw();            this.vX = random(-1,1);            this.vY = random(-1,1);        }        Bubble.prototype = {            init : function (x,y) {              //实现 函数的 overload                if(arguments.length == 0){                    this.x = random(0,w) ;                    this.y = random(0,h);                                    }else{                    this.x = x;                    this.y = y;                }                this.r = random(3,8);                this.color = this.colorData[Math.floor(random(0,5))];            },            draw : function () {                conT.beginPath();                conT.fillStyle = this.color;                conT.arc(this.x,this.y,this.r,0,2*Math.PI);                conT.fill();            },            move : function () {                this.x += this.vX;                this.y +=this.vY;            },            conllisionDect : function () {                if(this.x - this.r < 0 || this.x + this.r > w){                    this.vX = -this.vX;                };                if(this.y - this.r < 0 || this.y + this.r > h){                    this.vY = -this.vY;                }            }        }        creat(200);        window.setInterval(function () {            conT.clearRect(0,0,w,h);            for(var key of nBubble){                key.move();                key.draw();                key.conllisionDect();            }        },1000/60)        // 监听点击事件        canvas.addEventListener("mousemove", function(e) {            getMousePos(canvas, e);        });            function getMousePos(canvas, event) {            var rect = canvas.getBoundingClientRect();            var x = event.clientX - rect.left * (canvas.width / rect.width);            var y = event.clientY - rect.top * (canvas.height / rect.height);            var len = nBubble.length;            // console.log("x:"+x+",y:"+y);            nBubble[len] = new Bubble(x,y);        }            function random(min,max) {            return Math.random() * (max - min) + min;        }        function creat(num) {            for(var i = 0; i< num; i++){                nBubble[i] =  new Bubble();            }        }</script></body></html>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;​                                                                                 &lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="blogs" scheme="http://laptype.github.io/tags/blogs/"/>
+    
+  </entry>
   
   <entry>
     <title>记录9-14</title>
