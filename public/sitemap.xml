@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
+    
+    <lastmod>2021-10-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://laptype.github.io/2021/09/14/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E9%A1%B5%E9%9D%A2/</loc>
     
     <lastmod>2021-09-14</lastmod>
@@ -60,15 +67,22 @@
 
   <url>
     <loc>http://laptype.github.io/</loc>
-    <lastmod>2021-09-14</lastmod>
+    <lastmod>2021-10-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
+    <loc>http://laptype.github.io/tags/AVR/</loc>
+    <lastmod>2021-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://laptype.github.io/tags/blogs/</loc>
-    <lastmod>2021-09-14</lastmod>
+    <lastmod>2021-10-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

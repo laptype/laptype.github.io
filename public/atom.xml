@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2021-09-14T15:31:06.558Z</updated>
+  <updated>2021-10-18T05:08:59.710Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AVR delay loop的计算</title>
+    <link href="http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/"/>
+    <id>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</id>
+    <published>2021-10-18T05:07:09.000Z</published>
+    <updated>2021-10-18T05:08:59.710Z</updated>
+    
+    <content type="html"><![CDATA[<p>AVR 精确延时loop 计算</p><ul><li><p><code>LDI</code>: 1 clock cycle</p></li><li><p><code>DEC</code>: 1 clock cycle</p></li><li><p><code>NOP</code>: 1 clock cycle</p></li><li><p><code>LPM</code>: 3 clock cycle</p></li><li><p><code>BRNE</code>: 1 clock cycle if (Z == 0); 2 clock cycle if (Z != 0)</p></li></ul><p>Example: </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">LDIR16,100</span><br><span class="line">L1:</span><br><span class="line">DECR16</span><br><span class="line">BRNEL1</span><br></pre></td></tr></table></figure><p>这个小循环</p><ol><li>load R16 用 1 cycle</li><li>R16 从100减到0，一共计算100次，其中，99次计算结果不为0，<code>Z!=0</code>，BRNE用 2 cycle，1次计算结果为0，BRNE用 1 cycle。每次自减是 1 cycle。</li></ol><p>$$<br>\begin{aligned}<br>    number\ of\ cycles &amp; = LDI+(100-1)\times(BRNE_{(z!=0)}+DEC)+1\times(BRNE_{(z=0)}+DEC) \<br>                        &amp; = 1+(100-1)\times(2+1)+1\times(1+1) \<br>                        &amp; = 100\times3=300<br>\end{aligned}<br>$$</p><p>delay 1s: </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">    ldir16, 82</span><br><span class="line">    ldir17, 43</span><br><span class="line">    ldir18, 0</span><br><span class="line">L1:</span><br><span class="line">    decr18</span><br><span class="line">    brneL1</span><br><span class="line">    decr17</span><br><span class="line">    brneL1</span><br><span class="line">    decr16</span><br><span class="line">    brneL1</span><br><span class="line">    lpm</span><br><span class="line">    nop</span><br></pre></td></tr></table></figure><p>对于这个：<br>$$<br>\begin{aligned}<br>    n_{cycle} &amp; = \underbrace{(256-1)\times3+2+1}<em>{r18从0自减到0}\<br>    &amp;+\underbrace{(43-1)\times(\overbrace{256\times3+2)}^{r18从0自减到0}+\overbrace{2+1}^{r17}}</em>{r17从43自减到0}\<br>    &amp;+\underbrace{(82-1)\times[(256\times3+2)\times256+2]+2+1}_{r16从82自减到0}\<br>    &amp;+3+1 \<br>    &amp;=16000000<br>\end{aligned}<br>$$</p><p>用时：<br>$$<br>\frac{1}{16MHz}*16000000 cycles = 1s<br>$$</p><p>怎么反推呢，知道时间，写代码？</p><p><a href="http://darcy.rsgc.on.ca/ACES/TEI4M/AVRdelay.html">http://darcy.rsgc.on.ca/ACES/TEI4M/AVRdelay.html</a></p><p>到着推的话，先算出82，再算出43，再算出256</p><p>$$<br>\frac{16000000}{(3\times256+2)\times256+2}+1 = 82.1680 \approx 82 \<br>…\<br>…<br>$$</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;AVR 精确延时loop 计算&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;LDI&lt;/code&gt;: 1 clock cycle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;DEC&lt;/code&gt;: 1 clock cycle&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;N</summary>
+      
+    
+    
+    
+    
+    <category term="AVR" scheme="http://laptype.github.io/tags/AVR/"/>
+    
+  </entry>
   
   <entry>
     <title>hexo页面中嵌套其他页面</title>

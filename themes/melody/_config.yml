@@ -4,10 +4,10 @@
 # ---------------
 theme_color:
   enable: true
-  main: "#49B1F5"
-  paginator: "#00C4B6"
-  button_hover: "#FF7242"
-  text_selection: "#00C4B6"
+  main: "#225ba0"
+  paginator: "#57a4ff"
+  button_hover: "#3b91f6"
+  text_selection: "#57a4ff"
   link_color: "#858585"
   hr_color: "#A4D8FA"
   tag_start_color: "#A4D8FA"
@@ -141,9 +141,10 @@ cdn:
 # ---------------
 avatar: /img/avatar.jpg
 
-top_img: true # false or url of img
+top_img: https://files.alexhchu.com/2021/09/15/f5c5be11485e2.jpg
+# https://files.alexhchu.com/2021/09/15/1f2dd763c6328.jpg # false or url of img
 
-top_img_height: 60 # best range: 60 - 100
+top_img_height: 70 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
