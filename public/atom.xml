@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-10-27T07:44:34.324Z</updated>
+  <updated>2022-10-27T08:42:13.394Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://laptype.github.io/2022/10/27/pdf-test/"/>
     <id>http://laptype.github.io/2022/10/27/pdf-test/</id>
     <published>2022-10-27T07:01:34.000Z</published>
-    <updated>2022-10-27T07:44:34.324Z</updated>
+    <updated>2022-10-27T08:42:13.394Z</updated>
     
-    <content type="html"><![CDATA[<p>SVM 笔记一部分</p><div class="row">    <embed src="https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf" width="100%" height="550" type="application/pdf"></div><hr><h3 id="附github-改造成oss对象存储"><a class="markdownIt-Anchor" href="#附github-改造成oss对象存储"></a> 附：github 改造成OSS对象存储</h3><ol><li>创建一个仓库</li><li>push 一个文件</li><li>使用免费的 jsdelivr <a href="https://so.csdn.net/so/search?q=CDN&amp;spm=1001.2101.3001.7020">CDN</a></li><li><code>https://cdn.jsdelivr.net/gh/</code>前缀+<code>laptype/cloud</code>用户名和仓库名+文件名和文件夹名</li><li>例：<code>https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20</code>笔记.pdf</li><li><a href="https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf">https://cdn.jsdelivr.net/gh/laptype/cloud/svm 笔记.pdf</a></li></ol><h3 id="hexo-中加入pdf"><a class="markdownIt-Anchor" href="#hexo-中加入pdf"></a> hexo 中加入pdf</h3><ol><li><p>安装 <code>npm install --save hexo-pdf</code></p></li><li><p>在正常的 md 文件中添加 <code>&#123;% pdf ./pdf名字.pdf %&#125;</code></p></li><li><p>例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf %&#125;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>SVM 笔记一部分</p><div class="row">    <embed src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/svm%20%E7%AC%94%E8%AE%B0.pdf" width="100%" height="550" type="application/pdf"></div><hr><h3 id="附github-改造成oss对象存储"><a class="markdownIt-Anchor" href="#附github-改造成oss对象存储"></a> 附：github 改造成OSS对象存储</h3><ol><li>创建一个仓库</li><li>push 一个文件</li><li>使用免费的 jsdelivr <a href="https://so.csdn.net/so/search?q=CDN&amp;spm=1001.2101.3001.7020">CDN</a></li><li><code>https://cdn.jsdelivr.net/gh/</code>前缀+<code>laptype/cloud</code>用户名和仓库名+文件名和文件夹名</li><li>例：<code>https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20</code>笔记.pdf</li><li><a href="https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf">https://cdn.jsdelivr.net/gh/laptype/cloud/svm 笔记.pdf</a></li></ol><h3 id="hexo-中加入pdf"><a class="markdownIt-Anchor" href="#hexo-中加入pdf"></a> hexo 中加入pdf</h3><ol><li><p>安装 <code>npm install --save hexo-pdf</code></p></li><li><p>在正常的 md 文件中添加 <code>&#123;% pdf ./pdf名字.pdf %&#125;</code></p></li><li><p>例：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% pdf https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf %&#125;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
     
     
       
@@ -32,7 +32,7 @@
 
 
 	&lt;div class=&quot;row&quot;&gt;
-    &lt;embed src=&quot;https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf&quot; width=&quot;100%&quot; h</summary>
+    &lt;embed src=&quot;https://cdn.jsdelivr.net/gh/laptype/cloud@main/svm%20%E7%AC%94%E8%AE%B0.pdf&quot; width=&quot;10</summary>
       
     
     

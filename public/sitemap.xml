@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://laptype.github.io/2022/10/27/test_paper/</loc>
-    
-    <lastmod>2022-10-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/gallery/index.html</loc>
     
     <lastmod>2022-10-27</lastmod>
@@ -17,6 +10,13 @@
   
   <url>
     <loc>http://laptype.github.io/2022/10/27/pdf-test/</loc>
+    
+    <lastmod>2022-10-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/test_paper/</loc>
     
     <lastmod>2022-10-27</lastmod>
     
@@ -93,14 +93,14 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
+    <loc>http://laptype.github.io/2022/10/26/hello-world/</loc>
     
     <lastmod>2022-10-26</lastmod>
     
   </url>
   
   <url>
-    <loc>http://laptype.github.io/2022/10/26/hello-world/</loc>
+    <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
     
     <lastmod>2022-10-26</lastmod>
     
@@ -116,13 +116,6 @@
 
   
   <url>
-    <loc>http://laptype.github.io/tags/AVR/</loc>
-    <lastmod>2022-10-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/tags/blogs/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>daily</changefreq>
@@ -130,7 +123,7 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/tags/DL-ML/</loc>
+    <loc>http://laptype.github.io/tags/AVR/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -138,6 +131,13 @@
   
   <url>
     <loc>http://laptype.github.io/tags/test/</loc>
+    <lastmod>2022-10-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/DL-ML/</loc>
     <lastmod>2022-10-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
