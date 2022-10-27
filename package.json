@@ -29,6 +29,7 @@
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-theme-landscape": "^0.0.3",
-    "hexo-theme-melody": "^1.9.0"
+    "hexo-theme-melody": "^1.9.1",
+    "reveal.js": "^4.4.0"
   }
 }

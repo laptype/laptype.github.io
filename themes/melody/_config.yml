@@ -32,8 +32,10 @@ menu:
   Blog: /
   Posts: /archives
   Tags: /tags
+  Gallery: /gallery
   Categories: /categories
   demo: /HTML/demo1/demo1.html
+  game: /HTML/demo2/demo2.html
 # Favicon
 # ---------------
 favicon: /bitbug_favicon.ico
@@ -62,7 +64,10 @@ highlight_theme: default
 # see the icon_name in fontawesome website.
 # And you need to add the `fa` or `fab` prefix by your self.
 # ---------------
-#social:
+social:
+  images fa: /gallery
+
+
 #icon_name fa: url
 #icon_name fab: url
 
@@ -99,7 +104,7 @@ katex:
 
 # Toggle fireworks (IE >= 10)
 # ---------------
-fireworks: true
+fireworks: false
 
 # Analysis
 # ---------------
@@ -131,7 +136,7 @@ scripts:
 cdn:
   css:
     fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
-    # fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
+    fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
   js:
     anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
     jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js

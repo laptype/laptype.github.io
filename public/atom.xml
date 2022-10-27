@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-10-26T11:55:09.017Z</updated>
+  <updated>2022-10-27T06:46:11.869Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -17,11 +17,83 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>图床</title>
+    <link href="http://laptype.github.io/2022/10/27/%E5%9B%BE%E5%BA%8A/"/>
+    <id>http://laptype.github.io/2022/10/27/%E5%9B%BE%E5%BA%8A/</id>
+    <published>2022-10-27T06:43:42.000Z</published>
+    <updated>2022-10-27T06:46:11.869Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="imgbb"><a class="markdownIt-Anchor" href="#imgbb"></a> imgbb</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;picBed&quot;:</span> &#123;</span><br><span class="line">    <span class="attr">&quot;uploader&quot;:</span> <span class="string">&quot;web-uploader&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;web-uploader&quot;:</span> &#123;</span><br><span class="line">      <span class="attr">&quot;customBody&quot;:</span> <span class="string">&quot;&#123;\&quot;key\&quot;: \&quot;xxxxxxxx\&quot;&#125;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;customHeader&quot;:</span> <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;jsonPath&quot;:</span> <span class="string">&quot;data.url&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;paramName&quot;:</span> <span class="string">&quot;image&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;url&quot;:</span> <span class="string">&quot;https://api.imgbb.com/1/upload&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;picgoPlugins&quot;:</span> &#123;</span><br><span class="line">    <span class="attr">&quot;picgo-plugin-super-prefix&quot;:</span> <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">&quot;picgo-plugin-rename-file&quot;:</span> <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">&quot;picgo-plugin-web-uploader&quot;:</span> <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;picgo-plugin-super-prefix&quot;:</span> &#123;</span><br><span class="line">    <span class="attr">&quot;prefixFormat&quot;:</span> <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;fileFormat&quot;:</span> <span class="string">&quot;YYYYMMDDHHmmss&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;picgo-plugin-rename-file&quot;:</span> &#123;</span><br><span class="line">    <span class="attr">&quot;format&quot;:</span> <span class="string">&quot;&#123;localFolder:1&#125;/&#123;h&#125;-&#123;i&#125;-&#123;s&#125;-&#123;ms&#125;-&#123;origin&#125;-&#123;rand:2&#125;&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>使用 typora 中的 picgo-core 插件：</p><p>需要安装插件 picgo-plugin-web-uploader</p><blockquote><p>API version 1</p><p>Imgbb’s API v1 allows to upload pictures.</p></blockquote><p><a href="https://api.imgbb.com/">https://api.imgbb.com/</a> api 地址 Key 里面填 API key</p><p>但是这个只支持外链缩略图显示，不过在网页中是正常显示的</p><h2 id="smms不能用"><a class="markdownIt-Anchor" href="#smms不能用"></a> SMMS（不能用）</h2><p><code>CD C:\Users\你自己的用户名\AppData\Roaming\Typora\picgo\win64</code></p><p>安装插件  <code>.\picgo.exe install smms-user</code></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;imgbb&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#imgbb&quot;&gt;&lt;/a&gt; imgbb&lt;/h2&gt;
+&lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="tool" scheme="http://laptype.github.io/tags/tool/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test_paper</title>
+    <link href="http://laptype.github.io/2022/10/27/test_paper/"/>
+    <id>http://laptype.github.io/2022/10/27/test_paper/</id>
+    <published>2022-10-27T06:10:00.000Z</published>
+    <updated>2022-10-27T06:34:54.587Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.ibb.co/dkMF7sS/image-20221016203930430.png" alt="image-20221016203930430"></p><blockquote><p>这篇论文主要是说明了序列的长度是影响最后性能的关键因素。一个合理的长序列长度可以产生有意义的收益，而不产生任何额外的下游计算成本。</p><p>我理解的论文里面其中一个结论是，如果只是单纯增加序列长度，也不会有性能提升，还得有合适的 mask size （论文里面是选了相邻的四个patch作为一个mask单元）。然后就是，这篇论文的结论都是通过做实验得到的，论文也没有原理和理论解释。</p><p>这篇论文主要是提供了一些经验，设patch size小一点，让length长一点，然后用2*2的mask</p></blockquote><p>MAE的输入尺寸：</p><ol><li>一个 I * I 大小的图片，先分成 p * p 的patches</li><li>最后将二维的patch展开成一维的序列 L = (I /p)^2</li></ol><img src="https://i.ibb.co/GdkZZTC/image-20221016204703140.png" alt="image-20221016204220706" style="zoom: 67%;"><h2 id="mask-size"><a class="markdownIt-Anchor" href="#mask-size"></a> mask size</h2><p>原始的MAE直接输入长序列的话，会存在性能下降和退化。</p><p>这里的根本原因是 mask size 和 patch size 大小本质上是两个变量——前者控制任务，而后者与模型相关——但它们在最初的MAE中被设置为一个单独的变量。</p><p>论文中认为：</p><p>当处理长序列的时候，我们需要有更大的mask size，比如一个 2*2 的mask</p><blockquote><p>(2 * 2 的mask的意思是 4 个相邻的 patch 作为一个屏蔽的单元)</p></blockquote><img src="https://i.ibb.co/8mmTPxS/image-20221016204220706.png" alt="image-20221016204703140" style="zoom: 80%;"><p>相比于原版的 1*1 的mask size，2 * 2 的可以保留更多的难度。</p><blockquote><p>对于长序列的MAE，如果m = 1 * 1，模型大部分使用近处的底层纹理细节进行重建，如果m = 2 * 2 会是一个更有语义的任务。</p><p>他的意思是说，m = 1 * 1和m = 2 * 2 他们的序列长度是一样的，但是m = 2 * 2可以保持更好的难度。更有语义的任务。</p></blockquote><h2 id="消融实验"><a class="markdownIt-Anchor" href="#消融实验"></a> 消融实验</h2><h3 id="l-序列长度"><a class="markdownIt-Anchor" href="#l-序列长度"></a> L 序列长度</h3><img src="https://i.ibb.co/xqBmtSg/image-20221016205538765.png" alt="image-20221016205314981" style="zoom:80%;"><p>（a）是固定了输入图像的尺寸 I， 此时改变 p (patch size) 会改变L （序列长度）</p><p>结论是，L越大效果越好</p><p>（b）是固定了 p ，此时改变输入图像的大小，也会改变 L</p><p>结论是，L越大效果越好</p><img src="https://i.ibb.co/DbBLrb6/image-20221016205703682.png" alt="image-20221016205538765" style="zoom:80%;"><p>如果固定 L 序列长度不变，改变 I 和 p， 最后的性能差不多。</p><h3 id="mask-size-2"><a class="markdownIt-Anchor" href="#mask-size-2"></a> mask size</h3><img src="https://i.ibb.co/jJM7bz0/image-20221016210023515.png" alt="image-20221016205703682" style="zoom:80%;"><p>序列长度都是 L = 784 (长序列)，</p><p>当 m = 2 * 2的时候，效果最好，m =  1 * 1 结果和原始mae的效果差不多。当 m =  4 * 4 时，效果有点下降，可能是因为任务变得有些困难了，并开始产生伤害。</p><h3 id="encoderdecoder-sequence-lengths"><a class="markdownIt-Anchor" href="#encoderdecoder-sequence-lengths"></a> encoder/decoder sequence lengths</h3><img src="https://i.ibb.co/WGVRzDN/image-20221016205314981.png" alt="image-20221016210023515" style="zoom:80%;"><p>Le 是 encoder 长度，Ld 是decoder长度。r 是遮盖比 mask ratio</p><p>第一行的目的是减小 Le 的长度，可以通过调整 mask ratio。这里用的是 0.9375 的比例，我们选择这个比率，因为它具有与MAE baseline 相同的Le，同时匹配默认解码器长度。有趣的是，尽管速度比默认设置快，但结果甚至比基线还差。</p><p>这意味着简单地增加掩模比γ不能直接导致更好的表示，与较长的序列相结合的去耦掩模尺寸是更好的解决方案。</p><blockquote><p>也就是 较长的序列长度 + 合适的 mask size</p></blockquote><p>最后一行的目的是减小 Ld 的长度，这里是用了一个 learned 2 * 2 卷积 下采样。将序列从 28 * 28 变成 14 * 14 ，送到解码器。（这样 Ld 长度就变小了）</p><p>它不如我们的默认设置（中间行），但是明显好于 减小Le</p><p>这些结果表明，较长的Le和较长的Ld都有助于特征质量，其中Le更重要——可能是因为编码器是直接转移到下游任务的编码器。</p><h3 id="预训练时间"><a class="markdownIt-Anchor" href="#预训练时间"></a> 预训练时间</h3><img src="https://i.ibb.co/F5zhnzz/image-20221016210930514.png" alt="image-20221016210930514" style="zoom:80%;"><p>长序列的 MAE也带来了 4 倍的计算量。(L=784) 比 (L=196)</p><p>这里，MAE训练了 4 倍的时间 （a 4× long learning schedule is used for original MAE）</p><p>但是结果还是不如长序列。</p><p>这表明，通过增加序列长度L来花费额外的计算要比将其用于更长的训练计划要好</p><h2 id="序列长度的缩放趋势"><a class="markdownIt-Anchor" href="#序列长度的缩放趋势"></a> 序列长度的缩放趋势</h2><img src="https://i.ibb.co/mRkGXbh/image-20221016211221045.png" alt="image-20221016211221045" style="zoom:80%;"><ul><li><p>左边的图：</p><p>对于 larger-sized 的 VIT-L 来说，增大序列长度，可以持续的获得收益。但是 smaller 的 VIT-B 会在到一定序列长度后性能下降。</p><p>我们怀疑，VIT-L比VIT-B更好地扩展到更长的预训练序列，因为前者具有更高的建模能力，可以处理大量的输入图像补丁，并学习丰富的特征来表示这些补丁之间的关系(如物体或场景中的部分-整体关系，或视觉组件之间的上下文共发关系)。</p></li><li><p>右边的图：</p><p>相比左边的图，可以看出COCO预训练从较长的序列中获益更多:前者提高了2个AP点以上，而后者仅提高了1个AP点。</p><p>虽然没有对照研究证明，但我们推测这是因为COCO图像包含更多的对象和场景上下文，因此更适合捕捉这些对象及其交互的较长序列。</p></li></ul><p>​</p><h2 id="最后结论"><a class="markdownIt-Anchor" href="#最后结论"></a> 最后结论</h2><p>我们工作的一个潜在限制是，增加序列长度不可避免地<code>增加计算成本</code>，然而，我们相信这种成本可以通过一次训练前运行的各种应用程序的可能性来摊销。而且在这种转移过程中不产生额外成本的情况下，性能的提高是合理的。</p><p>虽然我们目前的发现大多是实证的，但我们希望它们能够帮助未来的理论解释，并激发更多这一前沿领域的研究。</p><h2 id="英语句子"><a class="markdownIt-Anchor" href="#英语句子"></a> 英语句子</h2><p>长期而重要的课题，</p><p>Effectively processing data with rich structures is <code>a longstanding and important topic</code> in multiple fields of AI. <code>It is aspirational</code> : e.g., it’s exciting to build systems that can create proper high-resolution images from arbitrary language descriptions</p><p>增加精度</p><p>… is widely accepted as a most reliable way to <code>boost accuracies.</code></p><p>不断提高的能力</p><p>In fact, model developments can also be attributed to their <code>ever-improving ability</code> to capture signals within rich data.</p><p>取代</p><p>For computer vision, ConvNets <code>supersede</code> fully-connected networks with translation equivariance and pyramidal architectures</p><p>… 继承这一特性</p><p>Inheriting this property, Vision Transformer (ViT) is quickly gaining popularity in computer vision</p><p>问题被…进一步放大</p><p>This issue can be <code>further amplified</code> by the ‘curse of dimensionality’ [18] with expanded input sizes.</p><p>几乎没有探索过的新的机会，</p><p>This presents a <code>fresh opportunity</code> for scaling that’s <code>barely explored</code> in NLP.</p><p>源于</p><p>Self-supervised learning holds the promise of scalability, which <code>stems from</code> its unsupervised nature that saves labeling costs.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://i.ibb.co/dkMF7sS/image-20221016203930430.png&quot; alt=&quot;image-20221016203930430&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这篇论文主要是说明了序列的长度是影响最后性能</summary>
+      
+    
+    
+    
+    
+    <category term="paper" scheme="http://laptype.github.io/tags/paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test33</title>
+    <link href="http://laptype.github.io/2022/10/27/test3/"/>
+    <id>http://laptype.github.io/2022/10/27/test3/</id>
+    <published>2022-10-27T04:00:00.000Z</published>
+    <updated>2022-10-27T05:17:56.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>test</p><p>test</p><p><img src="https://i.ibb.co/9qTJ9d4/20221027114011.jpg" alt="00306-test.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;test&lt;/p&gt;
+&lt;p&gt;test&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://i.ibb.co/9qTJ9d4/20221027114011.jpg&quot; alt=&quot;00306-test.png&quot;&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="http://laptype.github.io/2022/10/26/test/"/>
     <id>http://laptype.github.io/2022/10/26/test/</id>
     <published>2022-10-26T11:54:47.000Z</published>
-    <updated>2022-10-26T11:55:09.017Z</updated>
+    <updated>2022-10-26T12:47:41.143Z</updated>
     
     <content type="html"><![CDATA[<p>test</p><p>test</p>]]></content>
     
