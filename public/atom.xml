@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-10-27T08:42:13.394Z</updated>
+  <updated>2022-10-27T15:30:16.569Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test_video</title>
+    <link href="http://laptype.github.io/2022/10/27/test-video/"/>
+    <id>http://laptype.github.io/2022/10/27/test-video/</id>
+    <published>2022-10-27T15:23:09.000Z</published>
+    <updated>2022-10-27T15:30:16.569Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="test-test"><a class="markdownIt-Anchor" href="#test-test"></a> test test</h1><h2 id="test-2"><a class="markdownIt-Anchor" href="#test-2"></a> test 2</h2><hr><body><iframe src="//player.bilibili.com/player.html?aid=261977612&bvid=BV1ce411G7XR&cid=870665763&page=1" marginwidth="0" marginheight="0" width="100%" height="650px" frameborder="0" name="testpage" visibility:inherit z-index:1 scrolling="no"></iframe></body><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span><span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=261977612&amp;bvid=BV1ce411G7XR&amp;cid=870665763&amp;page=1&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">marginwidth</span>=<span class="string">&#x27;0&#x27;</span> <span class="attr">marginheight</span>=<span class="string">&#x27;0&#x27;</span></span></span><br><span class="line"><span class="tag"><span class="attr">width</span> = <span class="string">100%</span> <span class="attr">height</span> = <span class="string">650px</span></span></span><br><span class="line"><span class="tag">        <span class="attr">frameborder</span> = <span class="string">&quot;0&quot;</span> <span class="attr">name</span> = <span class="string">&quot;testpage&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">visibility:inherit</span></span></span><br><span class="line"><span class="tag"><span class="attr">z-index:1</span></span></span><br><span class="line"><span class="tag">        <span class="attr">scrolling</span> = <span class="string">&quot;no&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;test-test&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#test-test&quot;&gt;&lt;/a&gt; test test&lt;/h1&gt;
+&lt;h2 id=&quot;test-2&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#te</summary>
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://laptype.github.io/tags/blog/"/>
+    
+  </entry>
   
   <entry>
     <title>pdf-test (github作OSS)</title>
@@ -92,17 +115,14 @@
     <link href="http://laptype.github.io/2022/10/27/test3/"/>
     <id>http://laptype.github.io/2022/10/27/test3/</id>
     <published>2022-10-27T04:00:00.000Z</published>
-    <updated>2022-10-27T05:17:56.750Z</updated>
+    <updated>2022-10-27T14:15:05.751Z</updated>
     
-    <content type="html"><![CDATA[<p>test</p><p>test</p><p><img src="https://i.ibb.co/9qTJ9d4/20221027114011.jpg" alt="00306-test.png"></p>]]></content>
+    <content type="html"><![CDATA[<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">∣</mo><msub><mi>r</mi><mi>p</mi></msub><mo fence="true">∣</mo></mrow><annotation encoding="application/x-tex">\left|r_{p}\right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span>是相对于表面柔韧性的声音反射系数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">ϕ</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">{P_{i}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">{P_{r}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 之间的相位差.</p><p>test</p><p><img src="https://i.ibb.co/9qTJ9d4/20221027114011.jpg" alt="00306-test.png"></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;test&lt;/p&gt;
-&lt;p&gt;test&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.ibb.co/9qTJ9d4/20221027114011.jpg&quot; alt=&quot;00306-test.png&quot;&gt;&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;∣&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/msub&gt;&lt;mo fence=&quot;</summary>
       
     
     
