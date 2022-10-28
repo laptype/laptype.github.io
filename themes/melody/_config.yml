@@ -33,7 +33,7 @@ menu:
   Posts: /archives
   Tags: /tags
   Gallery: /gallery
-  Categories: /categories
+#  Categories: /categories
   demo: /HTML/demo1/demo1.html
   game: /HTML/demo2/demo2.html
 # Favicon
@@ -90,7 +90,7 @@ local_search:
 mathjax:
   enable: false
   cdn: https://cdn.jsdelivr.net/npm/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-  per_page: true
+  per_page: false
 
 # KaTeX
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/third-party-support.html#katex
@@ -148,10 +148,10 @@ cdn:
 # ---------------
 avatar: /img/avatar.jpg
 
-top_img: https://files.alexhchu.com/2021/09/15/f5c5be11485e2.jpg
+top_img: https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/wallhaven.jpg
 # https://files.alexhchu.com/2021/09/15/1f2dd763c6328.jpg # false or url of img
 
-top_img_height: 70 # best range: 60 - 100
+top_img_height: 85 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
