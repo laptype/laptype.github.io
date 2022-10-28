@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="hexo中md内置html的操作"><meta name="keywords" content="hexo"><meta name="author" content="Lapt lan"><meta name="copyright" content="Lapt lan"><title>hexo中md内置html的操作 | lapt</title><link rel="shortcut icon" href="/bitbug_favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script src="https://v1.hitokoto.cn/?encode=js&amp;charset=utf-8&amp;select=.footer_custom_text" defer></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  hexoVersion: '5.4.0'
+} </script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="lapt" type="application/atom+xml">
+</head><body><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="true"><div class="toggle-sidebar-info text-center"><span data-toggle="Toggle article">Toggle site</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">Catalog</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.jpg"></div><div class="author-info__name text-center">Lapt lan</div><div class="author-info__description text-center"></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">Articles</span><span class="pull-right">16</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">Tags</span><span class="pull-right">7</span></a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/wallhaven.jpg)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">lapt</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Blog</a><a class="site-page" href="/archives">Posts</a><a class="site-page" href="/tags">Tags</a><a class="site-page" href="/gallery">Gallery</a><a class="site-page" href="/HTML/demo1/demo1.html">demo</a><a class="site-page" href="/HTML/demo2/demo2.html">game</a></span><span class="pull-right"></span></div><div id="post-info"><div id="post-title">hexo中md内置html的操作</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2021-09-14</time></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><p>刚刚实现了一下md内置html的操作<br>
+想在博客页面内添加html页面套娃</p>
+<p><a href="/2021/09/14/page-test/">实现效果</a></p>
+<img src="https://files.alexhchu.com/2021/09/14/f8a334fd75eea.png" alt="g" title="实现效果" style="zoom:50%;">
+<p>其实没啥操作，也不知道这操作对不对</p>
+<p>就是像这样把代码一股脑全粘了进去</p>
+<img src="https://files.alexhchu.com/2021/09/14/19f994c922896.png" alt="Snipaste_2021-09-14_20-07-10.png" title="Snipaste_2021-09-14_20-07-10.png" style="zoom:50%;">
+<p>顺便记录一下修正其中的一个bug：</p>
+<p>就是鼠标监听事件，跟着鼠标移动做动作</p>
+<p>原本代码是这样：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&#x27;mousemove&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = e.pageX,</span><br><span class="line">    y = e.pageY,</span><br><span class="line">    len = nBubble.length;</span><br><span class="line">    nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">    <span class="built_in">console</span>.log(x,y);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>放在单独的html文件中没啥问题，可当我放在md中时，鼠标位置出现了偏移现象，原本应该鼠标位置为0，0的点变成了400多，400多</p>
+<p>这是因为canvas不是填充整个页面了，所以不能再使用全部页面的鼠标坐标</p>
+<p>要使用相对鼠标坐标</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">canvas.addEventListener(<span class="string">&quot;mousemove&quot;</span>, <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> rect = canvas.getBoundingClientRect();</span><br><span class="line">        <span class="keyword">var</span> x = e.clientX - rect.left * (canvas.width / rect.width);</span><br><span class="line">        <span class="keyword">var</span> y = e.clientY - rect.top * (canvas.height / rect.height);</span><br><span class="line">        <span class="keyword">var</span> len = nBubble.length;</span><br><span class="line">        <span class="comment">// console.log(&quot;x:&quot;+x+&quot;,y:&quot;+y);</span></span><br><span class="line">        nBubble[len] = <span class="keyword">new</span> Bubble(x,y);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>getBoundingClientRect()</code> 函数返回属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>top</td>
+<td>元素上边界距窗口最上边的距离</td>
+</tr>
+<tr>
+<td>left</td>
+<td>元素左边界距窗口最左边的距离</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>元素下边界距窗口最上边的距离</td>
+</tr>
+<tr>
+<td>right</td>
+<td>元素右边界距窗口最左边的距离</td>
+</tr>
+<tr>
+<td>width</td>
+<td>元素的宽度</td>
+</tr>
+<tr>
+<td>height</td>
+<td>元素的高度</td>
+</tr>
+</tbody>
+</table>
+<p>再使用鼠标坐标减去就行了</p>
+</div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/"><i class="fa fa-chevron-left">  </i><span>hexo 页面之间跳转</span></a></div><div class="next-post pull-right"><a href="/2021/09/14/test/page-test/"><span>page_test</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="vcomment"></div><script src="https://cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js"></script><script>var notify = 'false' == 'true';
+var verify = 'false' == 'true';
+var record_ip = 'false' == 'true';
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  recordIP:record_ip,
+  appId:'kCKaIduHOrwrGgvJupzcrfXA-gzGzoHsz',
+  appKey:'Fmg7rMLTRQmQpUUGsNNaHDcG',
+  placeholder:'leave a comment',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10',
+  lang: 'zh-cn'
+})</script></div></div><footer class="footer-bg" style="background-image: url(https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/wallhaven.jpg)"><div class="layout" id="footer"><div class="copyright">&copy;2021 - 2022 By Lapt lan</div><div class="framework-info"><span>Driven - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>Theme - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="footer_custom_text">hitokoto</div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script src="/js/katex.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script></body></html>

@@ -6,7 +6,19 @@ tags: hexo
 
 
 
-### hexo 中加入pdf
+
+
+## 使用 pdf.js
+
+[教程看的这个人的](https://blog.csdn.net/WCX_joker/article/details/126053055)
+
+（官方不支持外链PDF）[源码也是用这个人的](https://github.com/laptype/cloud/tree/main/pdfjs)
+
+链接格式
+
+`src="/pdfjs/web/viewer.html?file=https://cdn.jsdelivr.net/gh/laptype/cloud/svm%20%E7%AC%94%E8%AE%B0.pdf"`
+
+## hexo 中加入pdf （不用了）
 
 1. 安装 `npm install --save hexo-pdf`
 
@@ -37,6 +49,8 @@ tags: hexo
    
 
 [效果](/2022/10/27/SVM笔记一部分/)
+
+
 
 
 
