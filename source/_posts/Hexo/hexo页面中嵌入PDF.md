@@ -12,6 +12,17 @@ tags: hexo
 
 [教程看的这个人的](https://blog.csdn.net/WCX_joker/article/details/126053055)
 
+总之就是把源文件放在根目录 sorce 中，然后记得在根目录 config 中设置，这样就不会渲染这个文件夹了
+
+```yaml
+skip_render:
+  - "HTML/**"
+  - "pdfjs/**"
+  - "pdfjs/*"
+```
+
+
+
 （官方不支持外链PDF）[源码也是用这个人的](https://github.com/laptype/cloud/tree/main/pdfjs)
 
 链接格式
