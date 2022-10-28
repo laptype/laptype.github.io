@@ -5,6 +5,27 @@ date: 2022-10-28 15:44:35
 
 
 
+111
+
+---
+
+
+
+<body>
+	<iframe	src="\HTML\demo3\demo.html"
+			marginwidth='0' marginheight='0'
+			width = 100% height = 450px
+	        frameborder = "0" name = "testpage"
+			visibility:inherit
+			z-index:1
+	        scrolling = "no">
+	</iframe>
+</body>
+
+
+
+
+
 
 ## Training behavior of deep neural network in frequency domain
 
