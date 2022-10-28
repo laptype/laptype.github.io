@@ -149,14 +149,15 @@ cdn:
 avatar: /img/avatar.jpg
 
 top_img: https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/wallhaven.jpg
+#top_img: false
 # https://files.alexhchu.com/2021/09/15/1f2dd763c6328.jpg # false or url of img
 
-top_img_height: 85 # best range: 60 - 100
+top_img_height: 80 # best range: 60 - 100
 
 post_meta:
   date_type: created # created or updated
   categories: true
-  tags: true
+  tags: false
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/additional-package-support.html#word-counting
 wordcount:

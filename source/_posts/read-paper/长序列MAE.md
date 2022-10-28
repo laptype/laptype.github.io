@@ -1,12 +1,12 @@
 ---
-title: test_paper
+title: 长序列MAE
 date: 2022-10-27 14:10:00
 tags: paper
 ---
 
 
 
-![image-20221016203930430](https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-35-337-image-20221016203930430-71.png)
+![image-20221016203930430](https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-35-337-image-20221016203930430-71.png)
 
 
 
@@ -31,7 +31,7 @@ MAE的输入尺寸：
 
 
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163543491-4d.png" alt="image-20221027163543491" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163543491-4d.png" alt="image-20221027163543491" style="zoom:80%;" />
 
 ## mask size
 
@@ -47,7 +47,7 @@ MAE的输入尺寸：
 
 > (2 * 2 的mask的意思是 4 个相邻的 patch 作为一个屏蔽的单元)
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163603499-1a.png" alt="image-20221027163603499" style="zoom:67%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163603499-1a.png" alt="image-20221027163603499" style="zoom:67%;" />
 
 相比于原版的 1*1 的mask size，2 * 2 的可以保留更多的难度。
 
@@ -61,7 +61,7 @@ MAE的输入尺寸：
 
 ### L 序列长度
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163618555-ae.png" alt="image-20221027163618555" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163618555-ae.png" alt="image-20221027163618555" style="zoom:80%;" />
 
 （a）是固定了输入图像的尺寸 I， 此时改变 p (patch size) 会改变L （序列长度）
 
@@ -73,7 +73,7 @@ MAE的输入尺寸：
 
 
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163643071-de.png" alt="image-20221027163643071" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163643071-de.png" alt="image-20221027163643071" style="zoom:80%;" />
 
 如果固定 L 序列长度不变，改变 I 和 p， 最后的性能差不多。
 
@@ -81,7 +81,7 @@ MAE的输入尺寸：
 
 ### mask size
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163736159-0c.png" alt="image-20221027163736159" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163736159-0c.png" alt="image-20221027163736159" style="zoom:80%;" />
 
 序列长度都是 L = 784 (长序列)，
 
@@ -91,7 +91,7 @@ MAE的输入尺寸：
 
 ### encoder/decoder sequence lengths
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163759342-5e.png" alt="image-20221027163759342" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-856-image-20221027163759342-5e.png" alt="image-20221027163759342" style="zoom:80%;" />
 
 Le 是 encoder 长度，Ld 是decoder长度。r 是遮盖比 mask ratio
 
@@ -117,7 +117,7 @@ Le 是 encoder 长度，Ld 是decoder长度。r 是遮盖比 mask ratio
 
 ### 预训练时间
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-857-image-20221027163812237-68.png" alt="image-20221027163812237" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-857-image-20221027163812237-68.png" alt="image-20221027163812237" style="zoom:80%;" />
 
 长序列的 MAE也带来了 4 倍的计算量。(L=784) 比 (L=196)
 
@@ -131,7 +131,7 @@ Le 是 encoder 长度，Ld 是decoder长度。r 是遮盖比 mask ratio
 
 ## 序列长度的缩放趋势
 
-<img src="https://cdn.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-857-image-20221027163824623-df.png" alt="image-20221027163824623" style="zoom:80%;" />
+<img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%96%B0%E5%BB%BA%20Markdown_img/16-38-857-image-20221027163824623-df.png" alt="image-20221027163824623" style="zoom:80%;" />
 
 
 
