@@ -34,7 +34,7 @@ menu:
   Tags: /tags
   Gallery: /gallery
 #  Categories: /categories
-  demo: /HTML/demo1/demo.html
+  demo: /HTML/demo1/demo1.html
   game: /HTML/demo2/demo2.html
 # Favicon
 # ---------------
@@ -67,6 +67,7 @@ highlight_theme: default
 social:
   images fa: /gallery
   cube fa: /HTML/demo3/demo.html
+  atom fa: /HTML/demo4/demo.html
 
 
 #icon_name fa: url

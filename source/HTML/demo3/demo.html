@@ -8,7 +8,7 @@
 		</style>
 	</head>
 	<body>
-		<script src="js/three.js"></script>
+		<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/three.js/110/three.js"></script>
 		<script>
 			const scene = new THREE.Scene();
 			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -34,6 +34,34 @@
 			};
 
 			animate();
+
+			// 监听画面变化，更新渲染画面
+			window.addEventListener("resize", () => {
+				// console.log("画面变化了");
+				// 更新摄像头
+				camera.aspect = window.innerWidth / window.innerHeight;
+				//   更新摄像机的投影矩阵
+				camera.updateProjectionMatrix();
+
+				//   更新渲染器
+				renderer.setSize(window.innerWidth, window.innerHeight);
+				//   设置渲染器的像素比
+				renderer.setPixelRatio(window.devicePixelRatio);
+			});
+
+			window.addEventListener("dblclick", () => {
+				const fullScreenElement = document.fullscreenElement;
+				if (!fullScreenElement) {
+					//   双击控制屏幕进入全屏，退出全屏
+					// 让画布对象全屏
+					renderer.domElement.requestFullscreen();
+				} else {
+					//   退出全屏，使用document对象
+					document.exitFullscreen();
+				}
+				//   console.log(fullScreenElement);
+			});
+
 		</script>
 	</body>
 </html>
