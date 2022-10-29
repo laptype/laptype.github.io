@@ -32,12 +32,13 @@ function init() {
   textAnim_g(root, gui_params, tl);
   createTweenScrubber(tl);
 
-  root.gui.add(gui_params, 'text_a').name('文本(不支持中文)').onFinishChange(function() {reset_g();})
+  root.gui.add(gui_params, 'text_a').name('改文本(不支持中文)').onFinishChange(function() {reset_g();})
   root.gui.add(gui_params, 'size_g', 10,150,1).name('字的大小').onFinishChange(function() {reset_g();})
   var folder1 = root.gui.addFolder('颜色控制');
   folder1.addColor(gui_params, 'diffuse_color').name('扩散的颜色')
   folder1.addColor(gui_params, 'specular_color').name('反射光的颜色')
-  folder1.add(gui_params, 're').name('重置颜色')
+  folder1.add(gui_params, 're').name('-> 点此重置颜色 <-')
+  folder1.open();
   root.gui.add(gui_params, 'nu').name('鼠标双击可以全屏！')
   root.gui.add(gui_params, 'nu').name('可以鼠标拖动看看')
 
@@ -288,7 +289,7 @@ function THREERoot(params) {
 
   this.gui = new dat.GUI({ // 可接收参数
     name: 'My GUI',
-    width: 300,
+    width: 350,
     closed:true
   })
 
