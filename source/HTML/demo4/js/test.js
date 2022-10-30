@@ -292,7 +292,12 @@ function THREERoot(params) {
     width: 350,
     closed:true
   })
-
+  // 隐藏gui
+  if (window.innerWidth < 700 && window.innerHeight < 700) {
+    this.gui.close();
+  } else {
+    dat.GUI.toggleHide(false)
+  }
   this.resize = this.resize.bind(this);
   this.tick = this.tick.bind(this);
 
@@ -325,6 +330,13 @@ THREERoot.prototype = {
     this.renderer.render(this.scene, this.camera);
   },
   resize: function() {
+
+    if (window.innerWidth < 700 && window.innerHeight < 700) {
+      this.gui.close();
+    } else {
+      dat.GUI.toggleHide(false);
+    }
+
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
 

@@ -218,6 +218,32 @@ THREERoot.prototype = {
 
 
 
+## 当窗口变小时候自动关闭GUI
+
+```javascript
+  this.gui = new dat.GUI
+  ...
+  // 隐藏gui
+  if (window.innerWidth < 700 && window.innerHeight < 700) {
+    this.gui.close();
+  } else {
+    dat.GUI.toggleHide(false)
+  }
+  ...
+  window.addEventListener('resize', this.resize, true);
+  ...
+  // 在resize里面
+  resize: function() {
+    if (window.innerWidth < 700 && window.innerHeight < 700) {
+      this.gui.close();
+    } else {
+      // 这样就打开了
+      dat.GUI.toggleHide(false);
+    }
+```
+
+
+
 ## 想法
 
 [https://animpen.com/](https://animpen.com/)

@@ -117,6 +117,13 @@
 
 			// Rendering the animation   
 
+			  // 隐藏gui
+			if (window.innerWidth < 700 && window.innerHeight < 700) {
+				gui.close();
+			} else {
+				dat.GUI.toggleHide(false)
+			}
+
 			var render = function() {
 
 			requestAnimationFrame(render);
@@ -138,6 +145,11 @@
 			// 监听画面变化，更新渲染画面
 			window.addEventListener("resize", () => {
 				// console.log("画面变化了");
+				if (window.innerWidth < 700 && window.innerHeight < 700) {
+				gui.close();
+				} else {
+				dat.GUI.toggleHide(false);
+				}
 				// 更新摄像头
 				camera.aspect = window.innerWidth / window.innerHeight;
 				//   更新摄像机的投影矩阵
