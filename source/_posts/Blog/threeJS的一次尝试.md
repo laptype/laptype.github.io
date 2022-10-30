@@ -10,9 +10,9 @@ tags: blog
 
 ## 效果
 
-[3d文字扩散](/HTML/demo4/demo.html)
+- [3d文字扩散](/HTML/demo4/demo.html)
 
-[旋转立方体，官网的简单教程](/HTML/demo3/demo.html)
+- [旋转立方体，官网的简单教程（做了一点修改）](/HTML/demo3/demo.html)
 
 
 
