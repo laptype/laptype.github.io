@@ -93,6 +93,9 @@
 			// DAT.GUI Related Stuff
 
 			var gui = new dat.GUI({width: 350});
+			
+			dat.GUI.TEXT_CLOSED = "关闭控制器"
+			dat.GUI.TEXT_OPEN = "打开控制器"
 
 			var cam = gui.addFolder('Camera');
 			cam.add(options.camera, 'speed', 0, 0.0010).listen();

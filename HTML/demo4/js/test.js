@@ -292,6 +292,10 @@ function THREERoot(params) {
     width: 350,
     closed:true
   })
+
+  dat.GUI.TEXT_CLOSED = "关闭控制器"
+  dat.GUI.TEXT_OPEN = "打开控制器"
+  
   // 隐藏gui
   if (window.innerWidth < 700 && window.innerHeight < 700) {
     this.gui.close();
