@@ -6,27 +6,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/demo/index.html</loc>
-    
-    <lastmod>2022-10-30</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/gallery/index.html</loc>
-    
-    <lastmod>2022-10-30</lastmod>
-    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -34,6 +15,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -41,6 +24,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -48,6 +33,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -55,6 +42,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -62,6 +51,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -69,6 +60,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -76,6 +69,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -83,6 +78,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -90,6 +87,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -97,6 +96,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -104,6 +105,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -111,6 +114,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -118,6 +123,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -125,6 +132,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -132,6 +141,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -139,6 +150,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -146,6 +159,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -153,6 +168,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -160,6 +177,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -167,6 +186,8 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -174,6 +195,35 @@
     
     <lastmod>2022-10-30</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/demo/index.html</loc>
+    
+    <lastmod>2022-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/gallery/index.html</loc>
+    
+    <lastmod>2022-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
 
@@ -188,50 +238,50 @@
   <url>
     <loc>http://laptype.github.io/tags/AVR/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/DL-ML/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/blogs/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/blog/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/hexo/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/paper/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/test/</loc>
     <lastmod>2022-10-30</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 
