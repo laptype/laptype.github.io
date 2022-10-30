@@ -121,7 +121,7 @@
 			if (window.innerWidth < 700 && window.innerHeight < 700) {
 				gui.close();
 			} else {
-				dat.GUI.toggleHide(false)
+				gui.open();
 			}
 
 			var render = function() {
@@ -148,7 +148,7 @@
 				if (window.innerWidth < 700 && window.innerHeight < 700) {
 				gui.close();
 				} else {
-				dat.GUI.toggleHide(false);
+				gui.open();
 				}
 				// 更新摄像头
 				camera.aspect = window.innerWidth / window.innerHeight;

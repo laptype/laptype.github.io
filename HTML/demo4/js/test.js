@@ -296,7 +296,7 @@ function THREERoot(params) {
   if (window.innerWidth < 700 && window.innerHeight < 700) {
     this.gui.close();
   } else {
-    dat.GUI.toggleHide(false)
+    this.gui.open();
   }
   this.resize = this.resize.bind(this);
   this.tick = this.tick.bind(this);
@@ -334,7 +334,7 @@ THREERoot.prototype = {
     if (window.innerWidth < 700 && window.innerHeight < 700) {
       this.gui.close();
     } else {
-      dat.GUI.toggleHide(false);
+      this.gui.open();
     }
 
     this.camera.aspect = window.innerWidth / window.innerHeight;
