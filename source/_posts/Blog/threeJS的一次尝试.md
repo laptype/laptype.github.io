@@ -16,6 +16,19 @@ tags: blog
 
 
 
+<body>
+	<iframe	src="\HTML\demo4\demo.html"
+			marginwidth='0' marginheight='0'
+			width = 100% height = 400px
+	        frameborder = "0" name = "testpage"
+			visibility:inherit
+			z-index:1
+	        scrolling = "no">
+	</iframe>
+</body>
+
+
+
 [https://animpen.com/](https://animpen.com/)
 
 这个网站上面有一些threejs的例子，我今天尝试的这个其实是在这个基础上改进的。
