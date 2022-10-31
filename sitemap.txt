@@ -1,12 +1,10 @@
 http://laptype.github.io/tags/index.html
-http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/
 http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/
 http://laptype.github.io/2022/10/27/SVM%E7%AC%94%E8%AE%B0%E4%B8%80%E9%83%A8%E5%88%86/
 http://laptype.github.io/2021/12/09/arduino-miniproject/
 http://laptype.github.io/2021/09/13/hello-world/
 http://laptype.github.io/2022/10/28/pdf-test/
 http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/
-http://laptype.github.io/2022/10/30/Blog/github_action/
 http://laptype.github.io/2022/10/29/Blog/threeJS%E7%9A%84%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/
 http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/
 http://laptype.github.io/2022/10/27/Hexo/bat%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0/
@@ -23,6 +21,8 @@ http://laptype.github.io/2022/10/27/test/test3/
 http://laptype.github.io/categories/index.html
 http://laptype.github.io/demo/index.html
 http://laptype.github.io/gallery/index.html
+http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/
+http://laptype.github.io/2022/10/30/Blog/github_action/
 http://laptype.github.io/
 http://laptype.github.io/tags/AVR/
 http://laptype.github.io/tags/DL-ML/
