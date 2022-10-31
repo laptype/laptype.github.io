@@ -516,12 +516,21 @@ See https://github.com/adobe-type-tools/cmap-resources
 
 	<script type="text/javascript">
 		window.onload = function() {
+
 			var all_href = location.href;
 			var file_id = all_href.split('?')[1];
 			var pdfUrl = file_id.split('=')[1];
 			webViewerLoad(pdfUrl)
+
+			// let searchContent = decodeURIComponent(window.location.href);
+			// // window.location.href = `?key=${searchContent}`;
+			// console.log(searchContent)
+			// // let url = window.location.href; //获取请求进来的完整url
+			// if (searchContent.indexOf('?') != -1) {
+			// 	var text = searchContent.substring(searchContent.indexOf('?') + 1)
+			// 	console.log('text',text)
+			// }
 		}
-		
 		function openHelpDoc(){
 			alert('delete the code from line 80 to line 88 in web/viewer.html \n\n删除web/viewer.html中的第80行到第88行代码');
 		}

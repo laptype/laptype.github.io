@@ -6,6 +6,7 @@ function init() {
     antialias: (window.devicePixelRatio === 1),
     fov: 60
   });
+
   let gui_params = {
     text_a: 'LaPt 666',
     diffuse_color: 0x29a2d4, 
@@ -18,6 +19,10 @@ function init() {
     },
     size_g: 40
   }
+
+  let searchContent = decodeURIComponent(window.location.href);
+  if (searchContent.indexOf('?') != -1)
+    gui_params.text_a = searchContent.substring(searchContent.indexOf('?') + 1)
 
 
   root.renderer.setClearColor(0x000000);
