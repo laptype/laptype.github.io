@@ -4,214 +4,7 @@
   <url>
     <loc>http://laptype.github.io/tags/index.html</loc>
     
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/SVM%E7%AC%94%E8%AE%B0%E4%B8%80%E9%83%A8%E5%88%86/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/12/09/arduino-miniproject/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/28/pdf-test/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/08/01/%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2jupyter/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/29/Blog/threeJS%E7%9A%84%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/Hexo/bat%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%85%A5PDF/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E9%A1%B5%E9%9D%A2/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/Hexo/%E5%9B%BE%E5%BA%8A/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/read-paper/%E9%95%BF%E5%BA%8F%E5%88%97MAE/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/14/test/page-test/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/test/test-video/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/26/test/test/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/test/test3/</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/demo/index.html</loc>
-    
-    <lastmod>2022-10-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/gallery/index.html</loc>
-    
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -220,7 +13,70 @@
   <url>
     <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
     
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/SVM%E7%AC%94%E8%AE%B0%E4%B8%80%E9%83%A8%E5%88%86/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/12/09/arduino-miniproject/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/11/01/pdf-test/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/08/01/%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2jupyter/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -229,7 +85,151 @@
   <url>
     <loc>http://laptype.github.io/2022/10/30/Blog/github_action/</loc>
     
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/29/Blog/threeJS%E7%9A%84%E4%B8%80%E6%AC%A1%E5%B0%9D%E8%AF%95/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/Hexo/bat%E8%84%9A%E6%9C%AC%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%85%A5PDF/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/14/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E9%A1%B5%E9%9D%A2/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/Hexo/%E5%9B%BE%E5%BA%8A/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/read-paper/%E9%95%BF%E5%BA%8F%E5%88%97MAE/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/09/14/test/page-test/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/test/test-video/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/26/test/test/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/test/test3/</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/demo/index.html</loc>
+    
+    <lastmod>2022-11-01</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/gallery/index.html</loc>
+    
+    <lastmod>2022-11-01</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -238,7 +238,7 @@
 
   <url>
     <loc>http://laptype.github.io/</loc>
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -246,56 +246,56 @@
   
   <url>
     <loc>http://laptype.github.io/tags/AVR/</loc>
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/DL-ML/</loc>
-    <lastmod>2022-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/study/</loc>
-    <lastmod>2022-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/blogs/</loc>
-    <lastmod>2022-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/blog/</loc>
-    <lastmod>2022-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/hexo/</loc>
-    <lastmod>2022-10-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/paper/</loc>
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/test/</loc>
-    <lastmod>2022-10-31</lastmod>
+    <lastmod>2022-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/study/</loc>
+    <lastmod>2022-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/blogs/</loc>
+    <lastmod>2022-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/blog/</loc>
+    <lastmod>2022-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/hexo/</loc>
+    <lastmod>2022-11-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/tags/paper/</loc>
+    <lastmod>2022-11-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
