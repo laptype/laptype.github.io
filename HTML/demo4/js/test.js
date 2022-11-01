@@ -474,4 +474,3 @@ function createTweenScrubber(tween, seekSpeed) {
     e.preventDefault();
   });
 }
-
