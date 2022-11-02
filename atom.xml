@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-11-02T14:53:15.495Z</updated>
+  <updated>2022-11-02T14:55:49.350Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://laptype.github.io/2022/11/02/log/2022110222/"/>
     <id>http://laptype.github.io/2022/11/02/log/2022110222/</id>
     <published>2022-11-02T21:10:00.000Z</published>
-    <updated>2022-11-02T14:53:15.495Z</updated>
+    <updated>2022-11-02T14:55:49.350Z</updated>
     
     <content type="html"><![CDATA[<blockquote><p>这篇文章是在iphone上编写+上传</p><p>网上好像目前为止应该还没有这类功能吧，也可能我没看到，不过也没啥，原理很简单，实现起来也不难。主要是利用了githubAPI的put请求 <a href="https://docs.github.com/en/rest/repos/contents#create-or-update-file-contents">github API</a><br>iOS的快捷指令也很好编写。</p></blockquote><h2 id="快捷指令"><a class="markdownIt-Anchor" href="#快捷指令"></a> 快捷指令</h2><p>不知道为啥说需要登录iCloud，我明明登录了啊</p><p><a href="https://gcore.jsdelivr.net/gh/laptype/cloud/img/iphone/20221102215424.jpg">查看快捷指令的截图</a></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">https://api.github.com/repos/<span class="tag">&lt;<span class="name">userName</span>&gt;</span>/<span class="tag">&lt;<span class="name">repoName</span>&gt;</span>/contents/<span class="tag">&lt;<span class="name">path</span>&gt;</span>/<span class="tag">&lt;<span class="name">fileName</span>&gt;</span></span><br><span class="line"> PUT 请求</span><br><span class="line"> header 里</span><br><span class="line"> &#123;</span><br><span class="line">      &quot;Accept&quot; : &quot;application/vnd.github.v3+json&quot;,</span><br><span class="line">      &quot;Authorization&quot; : &quot;token <span class="tag">&lt;<span class="name">github</span> <span class="attr">token</span>&gt;</span>&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">json必传的两个参数</span><br><span class="line">&#123;</span><br><span class="line">&quot;message&quot; : 提交日志信息,</span><br><span class="line">&quot;content&quot; : 文件以base64形式不换行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud/img/iphone/20221102220057.jpg" alt="图片"></p>]]></content>
     
