@@ -34,3 +34,4 @@ http://laptype.github.io/tags/blog/
 http://laptype.github.io/tags/hexo/
 http://laptype.github.io/tags/paper/
 http://laptype.github.io/tags/hide/
+http://laptype.github.io/categories/log/
