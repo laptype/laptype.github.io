@@ -1,5 +1,4 @@
 http://laptype.github.io/tags/index.html
-http://laptype.github.io/2022/11/02/log/2022110221/
 http://laptype.github.io/2022/11/02/log/2022110222/
 http://laptype.github.io/2022/10/30/Blog/github_action/
 http://laptype.github.io/2022/10/27/test/pdf-test/
