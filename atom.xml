@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-11-02T10:12:26.969Z</updated>
+  <updated>2022-11-02T13:20:38.027Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://laptype.github.io/2022/11/02/log/2022110221/"/>
+    <id>http://laptype.github.io/2022/11/02/log/2022110221/</id>
+    <published>2022-11-02T13:20:38.027Z</published>
+    <updated>2022-11-02T13:20:38.027Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p>title: test from iPhone<br>date: 2022-11-02 21:10:00<br>tags: log<br>hidden: true</p><hr><p>测试下</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;title: test from iPhone&lt;br&gt;
+date: 2022-11-02 21:10:00&lt;br&gt;
+tags: log&lt;br&gt;
+hidden: true&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;测试下&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>利用Github Action 自动部署hexo</title>
@@ -486,27 +513,6 @@
     
     
     <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试嵌入网页</title>
-    <link href="http://laptype.github.io/2021/09/14/test/page-test/"/>
-    <id>http://laptype.github.io/2021/09/14/test/page-test/</id>
-    <published>2021-09-14T11:22:39.000Z</published>
-    <updated>2022-11-01T05:05:01.888Z</updated>
-    
-    <content type="html"><![CDATA[<p>​</p><span id="more"></span><a name="Anchor"> <head><meta charset="UTF-8"><title>canvas动动球</title><style>body{margin: 0;}.bubble{background-color: rgb(190, 190, 190);display: block;}</style></head><body><p><canvas class="bubble"></canvas></p><script>var h = window.innerHeight,w = window.innerWidth,nBubble = [];var canvas = document.getElementsByClassName('bubble')[0],conT = canvas.getContext('2d');(function () {canvas.width = w;canvas.height = h;window.onresize = function () {h = window.innerHeight;w = window.innerWidth;canvas.width = w;canvas.height = h;}})();function Bubble (x,y) {this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];if(arguments.length == 0){this.init();}else{this.init(x,y);}this.draw();this.vX = random(-1,1);this.vY = random(-1,1);}Bubble.prototype = {init : function (x,y) {              //实现 函数的 overloadif(arguments.length == 0){this.x = random(0,w) ;this.y = random(0,h);}else{this.x = x;this.y = y;}this.r = random(3,8);this.color = this.colorData[Math.floor(random(0,5))];},draw : function () {conT.beginPath();conT.fillStyle = this.color;conT.arc(this.x,this.y,this.r,0,2*Math.PI);conT.fill();},move : function () {this.x += this.vX;this.y +=this.vY;},conllisionDect : function () {if(this.x - this.r < 0 || this.x + this.r > w){this.vX = -this.vX;};if(this.y - this.r < 0 || this.y + this.r > h){this.vY = -this.vY;}}}creat(200);window.setInterval(function () {conT.clearRect(0,0,w,h);for(var key of nBubble){key.move();key.draw();key.conllisionDect();}},1000/60)// 监听点击事件    canvas.addEventListener("mousemove", function(e) {        getMousePos(canvas, e);    });    function getMousePos(canvas, event) {        var rect = canvas.getBoundingClientRect();        var x = event.clientX - rect.left * (canvas.width / rect.width);        var y = event.clientY - rect.top * (canvas.height / rect.height);        var len = nBubble.length;        // console.log("x:"+x+",y:"+y);        nBubble[len] = new Bubble(x,y);    }function random(min,max) {return Math.random() * (max - min) + min;}function creat(num) {for(var i = 0; i< num; i++){nBubble[i] =  new Bubble();}}</script></body></a>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;​&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
-    
-    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
     
   </entry>
   

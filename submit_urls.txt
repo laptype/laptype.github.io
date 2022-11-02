@@ -1,3 +1,4 @@
+http://laptype.github.io/2022/11/02/log/2022110221/
 http://laptype.github.io/2022/10/30/Blog/github_action/
 http://laptype.github.io/2022/10/27/test/pdf-test/
 http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/
@@ -7,4 +8,3 @@ http://laptype.github.io/2021/09/14/test/page-test/
 http://laptype.github.io/2022/10/27/test/test-video/
 http://laptype.github.io/2022/10/27/test/test3/
 http://laptype.github.io/2022/10/27/test/test/
-http://laptype.github.io/2021/09/13/hello-world/
