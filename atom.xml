@@ -6,7 +6,7 @@
   <link href="http://laptype.github.io/atom.xml" rel="self"/>
   
   <link href="http://laptype.github.io/"/>
-  <updated>2022-11-02T04:36:12.542Z</updated>
+  <updated>2022-11-02T10:12:26.969Z</updated>
   <id>http://laptype.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>利用Github Action 自动部署hexo</title>
     <link href="http://laptype.github.io/2022/10/30/Blog/github_action/"/>
     <id>http://laptype.github.io/2022/10/30/Blog/github_action/</id>
-    <published>2022-10-30T17:46:24.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
+    <published>2022-10-30T09:46:24.000Z</published>
+    <updated>2022-11-02T10:12:26.969Z</updated>
     
     <content type="html"><![CDATA[<p>首先是新建了一个私有的仓库用于存放源代码。然后将原先的源代码push到这个新的私有仓库中。（push 不需要node_modules）</p><p>然后在 私有仓库-&gt; setting -&gt; Secrets -&gt; Action 下创建一个ACtion sercets<br>KEY的话需要使用私钥，位置在 “C:\Users\用户.ssh\id_rsa” ，全部粘贴过去。(注意这个私钥的名字 HEXO_DEPLOY_PRIVATE_KEY)</p><p>然后就是点击 Action -&gt; set up a workflow -&gt; 在 main.yml 中粘贴代码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">name: Deploy</span><br><span class="line"></span><br><span class="line"># 这个地方就是什么时候脚本开始运行，设置的是当push到main上时候运行。</span><br><span class="line">on: </span><br><span class="line">  push:</span><br><span class="line">    branches:</span><br><span class="line">    - main</span><br><span class="line"></span><br><span class="line">jobs:</span><br><span class="line">  build:</span><br><span class="line">    runs-on: ubuntu-latest</span><br><span class="line">    name: A job to deploy blog.</span><br><span class="line">    steps:</span><br><span class="line">    - name: Checkout</span><br><span class="line">      uses: actions/checkout@v1</span><br><span class="line">      with:</span><br><span class="line">        submodules: true # Checkout private submodules(themes or something else).</span><br><span class="line">    </span><br><span class="line">    # Caching dependencies to speed up workflows. (GitHub will remove any cache entries that have not been accessed in over 7 days.)</span><br><span class="line">    - name: Cache node modules</span><br><span class="line">      uses: actions/cache@v1</span><br><span class="line">      id: cache</span><br><span class="line">      with:</span><br><span class="line">        path: node_modules</span><br><span class="line">        key: $&#123;&#123; runner.os &#125;&#125;-node-$&#123;&#123; hashFiles(&#x27;**/package-lock.json&#x27;) &#125;&#125;</span><br><span class="line">        restore-keys: |</span><br><span class="line">          $&#123;&#123; runner.os &#125;&#125;-node-</span><br><span class="line">    - name: Install Dependencies</span><br><span class="line">      if: steps.cache.outputs.cache-hit != &#x27;true&#x27;</span><br><span class="line">      run: npm ci</span><br><span class="line">    </span><br><span class="line">    # Deploy hexo blog website.</span><br><span class="line">    - name: Deploy</span><br><span class="line">      id: deploy</span><br><span class="line">      uses: sma11black/hexo-action@v1.0.3</span><br><span class="line">      with:</span><br><span class="line">        deploy_key: $&#123;&#123; secrets.HEXO_DEPLOY_PRIVATE_KEY &#125;&#125;</span><br><span class="line">        commit_msg: $&#123;&#123; github.event.head_commit.message &#125;&#125;  # (or delete this input setting to use hexo default settings)</span><br><span class="line">    # Use the output from the `deploy` step(use for test action)</span><br><span class="line">    - name: Get the output</span><br><span class="line">      run: |</span><br><span class="line">        echo &quot;$&#123;&#123; steps.deploy.outputs.notify &#125;&#125;&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>手机上添加测试</p><p><a href="https://github.com/marketplace/actions/hexo-action">https://github.com/marketplace/actions/hexo-action</a></p><p>最后吐槽一下，网上很多代码都不能用</p>]]></content>
     
@@ -72,8 +72,8 @@
     <title>主页隐藏某些post + 测试pdf</title>
     <link href="http://laptype.github.io/2022/10/27/test/pdf-test/"/>
     <id>http://laptype.github.io/2022/10/27/test/pdf-test/</id>
-    <published>2022-10-27T17:44:35.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
+    <published>2022-10-27T09:44:35.000Z</published>
+    <updated>2022-11-01T05:12:05.984Z</updated>
     
     <content type="html"><![CDATA[<p>主页隐藏某些post：</p><h2 id="安装hexo-generator-index2"><a class="markdownIt-Anchor" href="#安装hexo-generator-index2"></a> 安装hexo-generator-index2</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-index2 --save</span><br><span class="line">$ npm uninstall hexo-generator-index --save</span><br></pre></td></tr></table></figure><h2 id="修改hexo的配置文件"><a class="markdownIt-Anchor" href="#修改hexo的配置文件"></a> 修改hexo的配置文件</h2><p>打开hexo博客根目录下的<code>_config.yml</code></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># index2 generator是否包含官方的hexo-generator-index，默认true（包含）</span><br><span class="line">index2_include_index: true</span><br><span class="line">index2_generator:</span><br><span class="line">  path: &#x27;&#x27;</span><br><span class="line">  per_page: 10</span><br><span class="line">  order_by: -date # 按发布时间排序</span><br><span class="line">  include: </span><br><span class="line">  exclude:</span><br><span class="line">  - tag hide # 不包含标签为hide的文章</span><br><span class="line">  - category hide # 不包含分类为hide的文章</span><br><span class="line">  pagination_dir: page</span><br></pre></td></tr></table></figure><h2 id="md-中"><a class="markdownIt-Anchor" href="#md-中"></a> md 中</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 主页隐藏某些post：</span><br><span class="line">date: 2022-10-27 17:44:35</span><br><span class="line">tag: </span><br><span class="line">- test</span><br><span class="line">- hide</span><br><span class="line">- hexo</span><br></pre></td></tr></table></figure><hr><body><iframe src="\HTML\demo3\demo.html" marginwidth="0" marginheight="0" width="100%" height="450px" frameborder="0" name="testpage" visibility:inherit z-index:1 scrolling="no"></iframe></body><h2 id="training-behavior-of-deep-neural-network-in-frequency-domain"><a class="markdownIt-Anchor" href="#training-behavior-of-deep-neural-network-in-frequency-domain"></a> Training behavior of deep neural network in frequency domain</h2><p>论文原文链接：</p><hr><body><iframe src="/pdfjs/web/viewer.html?file=https://arxiv.org/pdf/1807.01251.pdf" marginwidth="0" marginheight="0" width="100%" height="450px" frameborder="0" name="testpage" visibility:inherit z-index:1 scrolling="no"></iframe></body><p>end</p>]]></content>
     
@@ -99,8 +99,8 @@
     <title>测试嵌入B站视频</title>
     <link href="http://laptype.github.io/2022/10/27/test/test/"/>
     <id>http://laptype.github.io/2022/10/27/test/test/</id>
-    <published>2022-10-27T15:44:35.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
+    <published>2022-10-27T07:44:35.000Z</published>
+    <updated>2022-11-01T05:03:53.759Z</updated>
     
     <content type="html"><![CDATA[<p>test</p><p>test</p>]]></content>
     
@@ -110,83 +110,6 @@
     <summary type="html">&lt;p&gt;test&lt;/p&gt;
 &lt;p&gt;test&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
-    
-    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试公式和图像</title>
-    <link href="http://laptype.github.io/2022/10/27/test/test3/"/>
-    <id>http://laptype.github.io/2022/10/27/test/test3/</id>
-    <published>2022-10-27T11:44:35.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<p>公式测试：</p><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">∣</mo><msub><mi>r</mi><mi>p</mi></msub><mo fence="true">∣</mo></mrow><annotation encoding="application/x-tex">\left|r_{p}\right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span>是相对于表面柔韧性的声音反射系数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">ϕ</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">{P_{i}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">{P_{r}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 之间的相位差.</p><p>test</p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/202210271624180.jpg" alt="cat test" style="zoom:15%;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;公式测试：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;∣&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/msu</summary>
-      
-    
-    
-    
-    
-    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
-    
-    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>改主題（修改顶部图高度）</title>
-    <link href="http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/"/>
-    <id>http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/</id>
-    <published>2022-10-27T11:28:30.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="修改顶部图"><a class="markdownIt-Anchor" href="#修改顶部图"></a> 修改顶部图</h2><p>首先用pycharm打开 主题文件</p><p>然后 Edit - Find - Find in file</p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%94%B9%E4%B8%BB%E9%A1%8C/12-54-639-image-20221028123144680-66.png" alt="image-20221028123144680" style="zoom: 67%;"><p>找到 <code>top_img_height</code></p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%94%B9%E4%B8%BB%E9%A1%8C/12-54-640-image-20221028123422792-bf.png" alt="image-20221028123422792" style="zoom: 67%;"><p>这几个文件中用到了 这个参数</p><p>我们想要改 文章页，就改 post.styl 里的数</p><p>改图片是 post.pug:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">6</span>] - <span class="keyword">var</span> bg_img = top_img !== <span class="literal">true</span> ? <span class="string">`background-image: url(<span class="subst">$&#123;top_img&#125;</span>)`</span> : <span class="string">&#x27;&#x27;</span></span><br><span class="line">[<span class="number">7</span>] - <span class="keyword">var</span> flag = top_img === <span class="literal">true</span> ? <span class="string">&#x27;no-bg&#x27;</span> : <span class="string">&#x27;&#x27;</span></span><br><span class="line">[<span class="number">8</span>] div#top-<span class="title function_">container</span>(style=bg_img <span class="keyword">class</span>=flag)</span><br></pre></td></tr></table></figure><p>改 <code>url($&#123;top_img&#125;)</code></p><p>​</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- var bg_img = top_img !== true ? `background-image: url($&#123;top_img&#125;)` : &#x27;&#x27;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;修改顶部图&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#修改顶部图&quot;&gt;&lt;/a&gt; 修改顶部图&lt;/h2&gt;
-&lt;p&gt;首先用pycharm打开 主题文件&lt;/p&gt;
-&lt;p&gt;然后 Edit - Find - Find in file&lt;/p&gt;
-&lt;img</summary>
-      
-    
-    
-    
-    
-    <category term="blog" scheme="http://laptype.github.io/tags/blog/"/>
-    
-    <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试界面内嵌入视频</title>
-    <link href="http://laptype.github.io/2022/10/27/test/test-video/"/>
-    <id>http://laptype.github.io/2022/10/27/test/test-video/</id>
-    <published>2022-10-27T10:44:35.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="test-test"><a class="markdownIt-Anchor" href="#test-test"></a> test test</h1><h2 id="test-2"><a class="markdownIt-Anchor" href="#test-2"></a> test 2</h2><hr><body><iframe src="//player.bilibili.com/player.html?aid=261977612&bvid=BV1ce411G7XR&cid=870665763&page=1" marginwidth="0" marginheight="0" width="100%" height="650px" frameborder="0" name="testpage" visibility:inherit z-index:1 scrolling="no"></iframe></body><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span><span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=261977612&amp;bvid=BV1ce411G7XR&amp;cid=870665763&amp;page=1&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">marginwidth</span>=<span class="string">&#x27;0&#x27;</span> <span class="attr">marginheight</span>=<span class="string">&#x27;0&#x27;</span></span></span><br><span class="line"><span class="tag"><span class="attr">width</span> = <span class="string">100%</span> <span class="attr">height</span> = <span class="string">650px</span></span></span><br><span class="line"><span class="tag">        <span class="attr">frameborder</span> = <span class="string">&quot;0&quot;</span> <span class="attr">name</span> = <span class="string">&quot;testpage&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">visibility:inherit</span></span></span><br><span class="line"><span class="tag"><span class="attr">z-index:1</span></span></span><br><span class="line"><span class="tag">        <span class="attr">scrolling</span> = <span class="string">&quot;no&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;test-test&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#test-test&quot;&gt;&lt;/a&gt; test test&lt;/h1&gt;
-&lt;h2 id=&quot;test-2&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#te</summary>
       
     
     
@@ -314,6 +237,83 @@
   </entry>
   
   <entry>
+    <title>测试公式和图像</title>
+    <link href="http://laptype.github.io/2022/10/27/test/test3/"/>
+    <id>http://laptype.github.io/2022/10/27/test/test3/</id>
+    <published>2022-10-27T03:44:35.000Z</published>
+    <updated>2022-11-01T05:04:09.233Z</updated>
+    
+    <content type="html"><![CDATA[<p>公式测试：</p><p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">∣</mo><msub><mi>r</mi><mi>p</mi></msub><mo fence="true">∣</mo></mrow><annotation encoding="application/x-tex">\left|r_{p}\right|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.036108em;vertical-align:-0.286108em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;">∣</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;">∣</span></span></span></span></span>是相对于表面柔韧性的声音反射系数，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\phi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">ϕ</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">{P_{i}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31166399999999994em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>P</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">{P_{r}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.13889em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span> 之间的相位差.</p><p>test</p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/gallery/202210271624180.jpg" alt="cat test" style="zoom:15%;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;公式测试：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;katex&quot;&gt;&lt;span class=&quot;katex-mathml&quot;&gt;&lt;math&gt;&lt;semantics&gt;&lt;mrow&gt;&lt;mo fence=&quot;true&quot;&gt;∣&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;r&lt;/mi&gt;&lt;mi&gt;p&lt;/mi&gt;&lt;/msu</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
+    
+    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>改主題（修改顶部图高度）</title>
+    <link href="http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/"/>
+    <id>http://laptype.github.io/2022/10/27/Blog/%E6%94%B9%E4%B8%BB%E9%A1%8C/</id>
+    <published>2022-10-27T03:28:30.000Z</published>
+    <updated>2022-11-01T05:07:46.685Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="修改顶部图"><a class="markdownIt-Anchor" href="#修改顶部图"></a> 修改顶部图</h2><p>首先用pycharm打开 主题文件</p><p>然后 Edit - Find - Find in file</p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%94%B9%E4%B8%BB%E9%A1%8C/12-54-639-image-20221028123144680-66.png" alt="image-20221028123144680" style="zoom: 67%;"><p>找到 <code>top_img_height</code></p><img src="https://gcore.jsdelivr.net/gh/laptype/cloud@main/img/%E6%94%B9%E4%B8%BB%E9%A1%8C/12-54-640-image-20221028123422792-bf.png" alt="image-20221028123422792" style="zoom: 67%;"><p>这几个文件中用到了 这个参数</p><p>我们想要改 文章页，就改 post.styl 里的数</p><p>改图片是 post.pug:</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">6</span>] - <span class="keyword">var</span> bg_img = top_img !== <span class="literal">true</span> ? <span class="string">`background-image: url(<span class="subst">$&#123;top_img&#125;</span>)`</span> : <span class="string">&#x27;&#x27;</span></span><br><span class="line">[<span class="number">7</span>] - <span class="keyword">var</span> flag = top_img === <span class="literal">true</span> ? <span class="string">&#x27;no-bg&#x27;</span> : <span class="string">&#x27;&#x27;</span></span><br><span class="line">[<span class="number">8</span>] div#top-<span class="title function_">container</span>(style=bg_img <span class="keyword">class</span>=flag)</span><br></pre></td></tr></table></figure><p>改 <code>url($&#123;top_img&#125;)</code></p><p>​</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- var bg_img = top_img !== true ? `background-image: url($&#123;top_img&#125;)` : &#x27;&#x27;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;修改顶部图&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#修改顶部图&quot;&gt;&lt;/a&gt; 修改顶部图&lt;/h2&gt;
+&lt;p&gt;首先用pycharm打开 主题文件&lt;/p&gt;
+&lt;p&gt;然后 Edit - Find - Find in file&lt;/p&gt;
+&lt;img</summary>
+      
+    
+    
+    
+    
+    <category term="blog" scheme="http://laptype.github.io/tags/blog/"/>
+    
+    <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试界面内嵌入视频</title>
+    <link href="http://laptype.github.io/2022/10/27/test/test-video/"/>
+    <id>http://laptype.github.io/2022/10/27/test/test-video/</id>
+    <published>2022-10-27T02:44:35.000Z</published>
+    <updated>2022-11-01T05:04:27.801Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="test-test"><a class="markdownIt-Anchor" href="#test-test"></a> test test</h1><h2 id="test-2"><a class="markdownIt-Anchor" href="#test-2"></a> test 2</h2><hr><body><iframe src="//player.bilibili.com/player.html?aid=261977612&bvid=BV1ce411G7XR&cid=870665763&page=1" marginwidth="0" marginheight="0" width="100%" height="650px" frameborder="0" name="testpage" visibility:inherit z-index:1 scrolling="no"></iframe></body><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span><span class="attr">src</span>=<span class="string">&quot;//player.bilibili.com/player.html?aid=261977612&amp;bvid=BV1ce411G7XR&amp;cid=870665763&amp;page=1&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">marginwidth</span>=<span class="string">&#x27;0&#x27;</span> <span class="attr">marginheight</span>=<span class="string">&#x27;0&#x27;</span></span></span><br><span class="line"><span class="tag"><span class="attr">width</span> = <span class="string">100%</span> <span class="attr">height</span> = <span class="string">650px</span></span></span><br><span class="line"><span class="tag">        <span class="attr">frameborder</span> = <span class="string">&quot;0&quot;</span> <span class="attr">name</span> = <span class="string">&quot;testpage&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">visibility:inherit</span></span></span><br><span class="line"><span class="tag"><span class="attr">z-index:1</span></span></span><br><span class="line"><span class="tag">        <span class="attr">scrolling</span> = <span class="string">&quot;no&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;test-test&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#test-test&quot;&gt;&lt;/a&gt; test test&lt;/h1&gt;
+&lt;h2 id=&quot;test-2&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#te</summary>
+      
+    
+    
+    
+    
+    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
+    
+    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVM 作业</title>
     <link href="http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/"/>
     <id>http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/</id>
@@ -418,73 +418,6 @@
   </entry>
   
   <entry>
-    <title>hexo 页面之间跳转</title>
-    <link href="http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/"/>
-    <id>http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/</id>
-    <published>2021-09-14T20:48:45.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[文字（页面）](/2021/09/14/page-test/)</span><br></pre></td></tr></table></figure><p>链接格式是：</p><p><code>permalink: :year/:month/:day/:title/</code></p><p>注意要在最前面加 <code>/</code></p><p><code>./</code> 表示当前目录</p><p><code>../</code> 父级目录</p><p><code>/</code> 根目录</p><p><a href="/HTML/demo2/demo2.html">demo</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
-      
-    
-    
-    
-    
-    <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试嵌入网页</title>
-    <link href="http://laptype.github.io/2021/09/14/test/page-test/"/>
-    <id>http://laptype.github.io/2021/09/14/test/page-test/</id>
-    <published>2021-09-14T19:22:39.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<p>​</p><span id="more"></span><a name="Anchor"> <head><meta charset="UTF-8"><title>canvas动动球</title><style>body{margin: 0;}.bubble{background-color: rgb(190, 190, 190);display: block;}</style></head><body><p><canvas class="bubble"></canvas></p><script>var h = window.innerHeight,w = window.innerWidth,nBubble = [];var canvas = document.getElementsByClassName('bubble')[0],conT = canvas.getContext('2d');(function () {canvas.width = w;canvas.height = h;window.onresize = function () {h = window.innerHeight;w = window.innerWidth;canvas.width = w;canvas.height = h;}})();function Bubble (x,y) {this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];if(arguments.length == 0){this.init();}else{this.init(x,y);}this.draw();this.vX = random(-1,1);this.vY = random(-1,1);}Bubble.prototype = {init : function (x,y) {              //实现 函数的 overloadif(arguments.length == 0){this.x = random(0,w) ;this.y = random(0,h);}else{this.x = x;this.y = y;}this.r = random(3,8);this.color = this.colorData[Math.floor(random(0,5))];},draw : function () {conT.beginPath();conT.fillStyle = this.color;conT.arc(this.x,this.y,this.r,0,2*Math.PI);conT.fill();},move : function () {this.x += this.vX;this.y +=this.vY;},conllisionDect : function () {if(this.x - this.r < 0 || this.x + this.r > w){this.vX = -this.vX;};if(this.y - this.r < 0 || this.y + this.r > h){this.vY = -this.vY;}}}creat(200);window.setInterval(function () {conT.clearRect(0,0,w,h);for(var key of nBubble){key.move();key.draw();key.conllisionDect();}},1000/60)// 监听点击事件    canvas.addEventListener("mousemove", function(e) {        getMousePos(canvas, e);    });    function getMousePos(canvas, event) {        var rect = canvas.getBoundingClientRect();        var x = event.clientX - rect.left * (canvas.width / rect.width);        var y = event.clientY - rect.top * (canvas.height / rect.height);        var len = nBubble.length;        // console.log("x:"+x+",y:"+y);        nBubble[len] = new Bubble(x,y);    }function random(min,max) {return Math.random() * (max - min) + min;}function creat(num) {for(var i = 0; i< num; i++){nBubble[i] =  new Bubble();}}</script></body></a>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;​&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
-    
-    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录9-14</title>
-    <link href="http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/"/>
-    <id>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</id>
-    <published>2021-09-14T14:38:29.000Z</published>
-    <updated>2022-11-02T04:36:12.542Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下</p><p>主要看的教程：</p><p><a href="https://www.zhihu.com/question/21193762/answer/489124966">https://www.zhihu.com/question/21193762/answer/489124966</a></p><p><a href="https://www.jianshu.com/p/0b1fccce74e0">https://www.jianshu.com/p/0b1fccce74e0</a></p><img src="/2021/09/14/%E8%AE%B0%E5%BD%959-14/image-20210914144037667.png" alt="image-20210914144037667" style="zoom:50%;"><p>原理就是</p><p><code>hexo d</code>上传到GitHub的是hexo编译之后的文件，不包含源文件</p><p>所以，就新建一个分支，用来保存源文件。</p><p>GIF测试</p><img src="https://files.alexhchu.com/2021/09/14/37a4c15a35d38.gif" alt="gif" title="gif" style="zoom:50%;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;今天重建了博客，因为之前博客source文件被删了也没有备份，所以想重建一个可以自带备份部署文件的博客，方便维护，记录一下&lt;/p&gt;
-&lt;p&gt;主要看的教程：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.zhihu.com/question/21193762/answ</summary>
-      
-    
-    
-    
-    
-    <category term="blog" scheme="http://laptype.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
     <title>hexo页面中嵌套其他页面</title>
     <link href="http://laptype.github.io/2021/09/14/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E9%A1%B5%E9%9D%A2/"/>
     <id>http://laptype.github.io/2021/09/14/Hexo/hexo%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%B5%8C%E5%A5%97%E5%85%B6%E4%BB%96%E9%A1%B5%E9%9D%A2/</id>
@@ -506,6 +439,74 @@
     
     
     <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 页面之间跳转</title>
+    <link href="http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/"/>
+    <id>http://laptype.github.io/2021/09/14/Hexo/hexo-%E9%A1%B5%E9%9D%A2%E4%B9%8B%E9%97%B4%E8%B7%B3%E8%BD%AC/</id>
+    <published>2021-09-14T12:48:45.000Z</published>
+    <updated>2022-11-01T05:05:56.291Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[文字（页面）](/2021/09/14/page-test/)</span><br></pre></td></tr></table></figure><p>链接格式是：</p><p><code>permalink: :year/:month/:day/:title/</code></p><p>注意要在最前面加 <code>/</code></p><p><code>./</code> 表示当前目录</p><p><code>../</code> 父级目录</p><p><code>/</code> 根目录</p><p><a href="/HTML/demo2/demo2.html">demo</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo中md内置html的操作</title>
+    <link href="http://laptype.github.io/2021/09/14/Hexo/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>http://laptype.github.io/2021/09/14/Hexo/hexo%E4%B8%ADmd%E5%86%85%E7%BD%AEhtml%E7%9A%84%E6%93%8D%E4%BD%9C/</id>
+    <published>2021-09-14T12:00:17.000Z</published>
+    <updated>2022-10-28T06:09:34.406Z</updated>
+    
+    <content type="html"><![CDATA[<p>刚刚实现了一下md内置html的操作<br>想在博客页面内添加html页面套娃</p><p><a href="/2021/09/14/page-test/">实现效果</a></p><img src="https://files.alexhchu.com/2021/09/14/f8a334fd75eea.png" alt="g" title="实现效果" style="zoom:50%;"><p>其实没啥操作，也不知道这操作对不对</p><p>就是像这样把代码一股脑全粘了进去</p><img src="https://files.alexhchu.com/2021/09/14/19f994c922896.png" alt="Snipaste_2021-09-14_20-07-10.png" title="Snipaste_2021-09-14_20-07-10.png" style="zoom:50%;"><p>顺便记录一下修正其中的一个bug：</p><p>就是鼠标监听事件，跟着鼠标移动做动作</p><p>原本代码是这样：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">canvas.<span class="title function_">addEventListener</span>(<span class="string">&#x27;mousemove&#x27;</span>,<span class="keyword">function</span> (<span class="params">e</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> x = e.<span class="property">pageX</span>,</span><br><span class="line">    y = e.<span class="property">pageY</span>,</span><br><span class="line">    len = nBubble.<span class="property">length</span>;</span><br><span class="line">    nBubble[len] = <span class="keyword">new</span> <span class="title class_">Bubble</span>(x,y);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(x,y);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><p>放在单独的html文件中没啥问题，可当我放在md中时，鼠标位置出现了偏移现象，原本应该鼠标位置为0，0的点变成了400多，400多</p><p>这是因为canvas不是填充整个页面了，所以不能再使用全部页面的鼠标坐标</p><p>要使用相对鼠标坐标</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">canvas.<span class="title function_">addEventListener</span>(<span class="string">&quot;mousemove&quot;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> rect = canvas.<span class="title function_">getBoundingClientRect</span>();</span><br><span class="line">        <span class="keyword">var</span> x = e.<span class="property">clientX</span> - rect.<span class="property">left</span> * (canvas.<span class="property">width</span> / rect.<span class="property">width</span>);</span><br><span class="line">        <span class="keyword">var</span> y = e.<span class="property">clientY</span> - rect.<span class="property">top</span> * (canvas.<span class="property">height</span> / rect.<span class="property">height</span>);</span><br><span class="line">        <span class="keyword">var</span> len = nBubble.<span class="property">length</span>;</span><br><span class="line">        <span class="comment">// console.log(&quot;x:&quot;+x+&quot;,y:&quot;+y);</span></span><br><span class="line">        nBubble[len] = <span class="keyword">new</span> <span class="title class_">Bubble</span>(x,y);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p><code>getBoundingClientRect()</code> 函数返回属性</p><table><thead><tr><th>属性</th><th>描述</th></tr></thead><tbody><tr><td>top</td><td>元素上边界距窗口最上边的距离</td></tr><tr><td>left</td><td>元素左边界距窗口最左边的距离</td></tr><tr><td>bottom</td><td>元素下边界距窗口最上边的距离</td></tr><tr><td>right</td><td>元素右边界距窗口最左边的距离</td></tr><tr><td>width</td><td>元素的宽度</td></tr><tr><td>height</td><td>元素的高度</td></tr></tbody></table><p>再使用鼠标坐标减去就行了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;刚刚实现了一下md内置html的操作&lt;br&gt;
+想在博客页面内添加html页面套娃&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/2021/09/14/page-test/&quot;&gt;实现效果&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;https://files.alexhchu.com/2021/0</summary>
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://laptype.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试嵌入网页</title>
+    <link href="http://laptype.github.io/2021/09/14/test/page-test/"/>
+    <id>http://laptype.github.io/2021/09/14/test/page-test/</id>
+    <published>2021-09-14T11:22:39.000Z</published>
+    <updated>2022-11-01T05:05:01.888Z</updated>
+    
+    <content type="html"><![CDATA[<p>​</p><span id="more"></span><a name="Anchor"> <head><meta charset="UTF-8"><title>canvas动动球</title><style>body{margin: 0;}.bubble{background-color: rgb(190, 190, 190);display: block;}</style></head><body><p><canvas class="bubble"></canvas></p><script>var h = window.innerHeight,w = window.innerWidth,nBubble = [];var canvas = document.getElementsByClassName('bubble')[0],conT = canvas.getContext('2d');(function () {canvas.width = w;canvas.height = h;window.onresize = function () {h = window.innerHeight;w = window.innerWidth;canvas.width = w;canvas.height = h;}})();function Bubble (x,y) {this.colorData = ["rgb(94,213,209)","rgb(255,110,151)","rgb(199,255,236)","rgb(0,255,128)","rgb(208,233,255)"];if(arguments.length == 0){this.init();}else{this.init(x,y);}this.draw();this.vX = random(-1,1);this.vY = random(-1,1);}Bubble.prototype = {init : function (x,y) {              //实现 函数的 overloadif(arguments.length == 0){this.x = random(0,w) ;this.y = random(0,h);}else{this.x = x;this.y = y;}this.r = random(3,8);this.color = this.colorData[Math.floor(random(0,5))];},draw : function () {conT.beginPath();conT.fillStyle = this.color;conT.arc(this.x,this.y,this.r,0,2*Math.PI);conT.fill();},move : function () {this.x += this.vX;this.y +=this.vY;},conllisionDect : function () {if(this.x - this.r < 0 || this.x + this.r > w){this.vX = -this.vX;};if(this.y - this.r < 0 || this.y + this.r > h){this.vY = -this.vY;}}}creat(200);window.setInterval(function () {conT.clearRect(0,0,w,h);for(var key of nBubble){key.move();key.draw();key.conllisionDect();}},1000/60)// 监听点击事件    canvas.addEventListener("mousemove", function(e) {        getMousePos(canvas, e);    });    function getMousePos(canvas, event) {        var rect = canvas.getBoundingClientRect();        var x = event.clientX - rect.left * (canvas.width / rect.width);        var y = event.clientY - rect.top * (canvas.height / rect.height);        var len = nBubble.length;        // console.log("x:"+x+",y:"+y);        nBubble[len] = new Bubble(x,y);    }function random(min,max) {return Math.random() * (max - min) + min;}function creat(num) {for(var i = 0; i< num; i++){nBubble[i] =  new Bubble();}}</script></body></a>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;​&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="test" scheme="http://laptype.github.io/tags/test/"/>
+    
+    <category term="hide" scheme="http://laptype.github.io/tags/hide/"/>
     
   </entry>
   
