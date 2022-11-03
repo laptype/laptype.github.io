@@ -63,19 +63,18 @@
 					_speed: 0
 				},
 				stop: function() {
-					this._vx = this.velx;
-					this._vy = this.vely;
-					this.camera._speed = this.camera.speed;
+					this._vx = (this.velx == 0) ? this._vx : this.velx;
+					this._vy = (this.vely == 0) ? this._vy : this.vely;
+					this.camera._speed = (this.camera.speed == 0) ? this.camera._speed : this.camera.speed;
+
 					this.camera.speed = 0;
 					this.velx = 0;
 					this.vely = 0;
 				},
 				play: function() {
-					if (this.velx == 0 && this.vely == 0) {
-						this.velx = this._vx;
-						this.vely = this._vy;
-						this.camera.speed = this.camera._speed;
-					}
+					this.velx = (this.velx == 0) ? this._vx : this.velx;
+					this.vely = (this.vely == 0) ? this._vy : this.vely;
+					this.camera.speed = (this.camera.speed == 0) ? this.camera._speed : this.camera.speed;
 				},
 				reset: function() {
 					this.velx = 0.01;

@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
+    
+    <lastmod>2022-11-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://laptype.github.io/2022/08/01/%E5%B0%8F%E6%B3%A2%E5%8F%98%E6%8D%A2jupyter/</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -138,15 +147,6 @@
   
   <url>
     <loc>http://laptype.github.io/2021/12/09/arduino-miniproject/</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
     
     <lastmod>2022-11-03</lastmod>
     
