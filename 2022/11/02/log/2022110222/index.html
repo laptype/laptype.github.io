@@ -15,7 +15,10 @@
 iOS的快捷指令也很好编写。</p>
 </blockquote>
 <h2 id="快捷指令"><a class="markdownIt-Anchor" href="#快捷指令"></a> 快捷指令</h2>
-<p>不知道为啥说需要登录iCloud，我明明登录了啊</p>
+<p><a target="_blank" rel="noopener" href="https://www.icloud.com/shortcuts/a42f4481a7b94b508d7b210c8d00225d">https://www.icloud.com/shortcuts/a42f4481a7b94b508d7b210c8d00225d</a></p>
+<blockquote>
+<p>记得打开在共享表单中显示</p>
+</blockquote>
 <p><a target="_blank" rel="noopener" href="https://gcore.jsdelivr.net/gh/laptype/cloud/img/iphone/20221102215424.jpg">查看快捷指令的截图</a></p>
 <h2 id="github-api"><a class="markdownIt-Anchor" href="#github-api"></a> Github API</h2>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">https://api.github.com/repos/<span class="tag">&lt;<span class="name">userName</span>&gt;</span>/<span class="tag">&lt;<span class="name">repoName</span>&gt;</span>/contents/<span class="tag">&lt;<span class="name">path</span>&gt;</span>/<span class="tag">&lt;<span class="name">fileName</span>&gt;</span></span><br><span class="line"> PUT 请求</span><br><span class="line"> header 里</span><br><span class="line"> &#123;</span><br><span class="line">      &quot;Accept&quot; : &quot;application/vnd.github.v3+json&quot;,</span><br><span class="line">      &quot;Authorization&quot; : &quot;token <span class="tag">&lt;<span class="name">github</span> <span class="attr">token</span>&gt;</span>&quot;</span><br><span class="line">&#125;</span><br><span class="line">请求体里：json必传的两个参数</span><br><span class="line">&#123;</span><br><span class="line">&quot;message&quot; : 提交日志信息,</span><br><span class="line">&quot;content&quot; : 文件以base64形式不换行</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
