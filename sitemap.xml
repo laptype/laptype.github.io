@@ -11,15 +11,6 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/2022/11/02/log/2022-11-02/</loc>
-    
-    <lastmod>2022-11-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/2022/11/02/log/2022110222/</loc>
     
     <lastmod>2022-11-03</lastmod>
@@ -313,13 +304,6 @@
   
   <url>
     <loc>http://laptype.github.io/tags/hide/</loc>
-    <lastmod>2022-11-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/tags/log/</loc>
     <lastmod>2022-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
