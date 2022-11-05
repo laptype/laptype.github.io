@@ -11,42 +11,6 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/categories/index.html</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/demo/index.html</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/gallery/index.html</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/2022/10/26/SVM%E4%BD%9C%E4%B8%9A/</loc>
     
     <lastmod>2022-11-05</lastmod>
@@ -102,24 +66,6 @@
   
   <url>
     <loc>http://laptype.github.io/2021/09/14/%E8%AE%B0%E5%BD%959-14/</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/11/02/Blog/github%20API+IOS%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</loc>
-    
-    <lastmod>2022-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/30/Blog/github_action/</loc>
     
     <lastmod>2022-11-05</lastmod>
     
@@ -246,6 +192,60 @@
   
   <url>
     <loc>http://laptype.github.io/2022/10/27/test/test3/</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/demo/index.html</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/gallery/index.html</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/11/02/Blog/github%20API+IOS%E5%BF%AB%E6%8D%B7%E6%8C%87%E4%BB%A4/</loc>
+    
+    <lastmod>2022-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/30/Blog/github_action/</loc>
     
     <lastmod>2022-11-05</lastmod>
     
