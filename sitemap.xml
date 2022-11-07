@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>http://laptype.github.io/categories/index.html</loc>
+    
+    <lastmod>2022-11-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
     
     <lastmod>2022-11-07</lastmod>
@@ -48,15 +57,6 @@
   
   <url>
     <loc>http://laptype.github.io/2022/11/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E7%AC%94%E8%AE%B0-2/</loc>
-    
-    <lastmod>2022-11-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/categories/index.html</loc>
     
     <lastmod>2022-11-07</lastmod>
     
