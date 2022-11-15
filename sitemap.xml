@@ -4,7 +4,7 @@
   <url>
     <loc>http://laptype.github.io/tags/index.html</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>http://laptype.github.io/2022/10/27/test/pdf-test/</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>http://laptype.github.io/2021/09/14/Blog/%E8%AE%B0%E5%BD%959-14/</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
   <url>
     <loc>http://laptype.github.io/categories/index.html</loc>
     
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -292,7 +292,7 @@
 
   <url>
     <loc>http://laptype.github.io/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -300,56 +300,56 @@
   
   <url>
     <loc>http://laptype.github.io/tags/AVR/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/DL-ML/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/blog/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/study/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/hexo/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/test/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/hide/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/tags/paper/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -358,28 +358,28 @@
   
   <url>
     <loc>http://laptype.github.io/categories/DL-ML/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/categories/test/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/categories/log/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://laptype.github.io/categories/DL-ML/ML/</loc>
-    <lastmod>2022-11-10</lastmod>
+    <lastmod>2022-11-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
