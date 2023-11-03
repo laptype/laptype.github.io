@@ -8,7 +8,7 @@ function init() {
   });
 
   let gui_params = {
-    text_a: 'LaPt 666',
+    text_a: 'LaPt LaPt',
     diffuse_color: 0x29a2d4, 
     specular_color: 0xf0ea8f,
     re: () => {
