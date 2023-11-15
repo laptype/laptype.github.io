@@ -11,51 +11,6 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2022/10/27/test/pdf-test/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-basic-alg/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode_template/</loc>
-    
-    <lastmod>2023-11-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/gallery/index.html</loc>
     
     <lastmod>2023-11-15</lastmod>
@@ -92,7 +47,52 @@
   </url>
   
   <url>
+    <loc>http://laptype.github.io/2021/09/13/hello-world/</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://laptype.github.io/2021/09/14/Blog/%E8%AE%B0%E5%BD%959-14/</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2022/10/27/test/pdf-test/</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-basic-alg/</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/</loc>
+    
+    <lastmod>2023-11-15</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode_template/</loc>
     
     <lastmod>2023-11-15</lastmod>
     
