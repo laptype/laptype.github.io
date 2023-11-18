@@ -48,6 +48,44 @@
 <h2 id="数组去重"><a class="markdownIt-Anchor" href="#数组去重"></a> 数组去重</h2>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; nums = &#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">3</span>,<span class="number">7</span>&#125;;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">N</span><span class="params">(nums)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> slow = <span class="number">0</span>, fast = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">while</span> (fast &lt; N.<span class="built_in">size</span>()) &#123;</span><br><span class="line">    <span class="keyword">while</span> (fast &lt; N.<span class="built_in">size</span>() &amp;&amp; N[fast] == N[slow]) fast++;</span><br><span class="line">    slow ++;</span><br><span class="line">    <span class="keyword">if</span> (fast &lt; N.<span class="built_in">size</span>()) N[slow] = N[fast];</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 重置长度</span></span><br><span class="line">N.<span class="built_in">resize</span>(slow);</span><br></pre></td></tr></table></figure>
 <h1 id="二分查找"><a class="markdownIt-Anchor" href="#二分查找"></a> 二分查找</h1>
+<p><strong>闭区间写法：</strong></p>
+<ol>
+<li>
+<p>找到一个有序数组中第一个大于k的数：FFFFFFTTTTTTT (找第一个满足的)</p>
+<ul>
+<li>L和R分别指向询问的左右边界，即闭区间 [L, R]</li>
+<li>M指向正在询问的数</li>
+</ul>
+</li>
+<li>
+<p>如果 (M == false) —&gt; [L, M] 都是 false，剩余不确定的区间是 [M+1, R] —&gt; 下一步 L = M+1</p>
+</li>
+<li>
+<p>如果 (M == true) —&gt; [M, R] 都是 true，剩下的不确定区间是 [L, M-1] —&gt; 下一步 R = M-1</p>
+</li>
+<li>
+<p>【循环不变量】</p>
+<ul>
+<li>L-1 一定指向的是 False</li>
+<li>R+1 一定指向的是 True</li>
+</ul>
+</li>
+<li>
+<p>因此循环结束后，R+1就是我们要找的数，此时R+1==L，所以答案也可以用L表示</p>
+</li>
+<li>
+<p>如果数组中都是F，那么L会一直往右移动，直到等于R+1，此时L也就是等于数组长度</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">lower_bound</span>(<span class="params">nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(nums) - <span class="number">1</span>  <span class="comment"># 闭区间 [left, right]</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> left &lt;= right:  <span class="comment"># 区间不为空</span></span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span>  <span class="comment"># [mid+1, right]</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid - <span class="number">1</span>  <span class="comment"># [left, mid-1]</span></span><br><span class="line">            <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
+<p><strong>左闭右开区间</strong>：更改(M == true)情况 [L, M-1] --&gt; [L, M)	所以 R = M</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">lower_bound</span>(<span class="params">nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    left = <span class="number">0</span></span><br><span class="line">    right = <span class="built_in">len</span>(nums)  <span class="comment"># 左开右闭区间 [left, right)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> left &lt; right:  <span class="comment"># 区间不为空</span></span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid + <span class="number">1</span>  <span class="comment"># [mid+1, right]</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid  <span class="comment"># [left, mid)</span></span><br><span class="line">            <span class="keyword">return</span> left</span><br></pre></td></tr></table></figure>
+<p><strong>开区间</strong>：</p>
+<ul>
+<li>(M == false)情况：[M+1, R] --&gt; [M, R]</li>
+<li>[(M == true)情况：[L, M-1] --&gt; [L, M)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">lower_bound</span>(<span class="params">nums: <span class="type">List</span>[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; <span class="built_in">int</span>:</span><br><span class="line">    left = -<span class="number">1</span></span><br><span class="line">    right = <span class="built_in">len</span>(nums)  <span class="comment"># 开区间 (left, right)</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> left +<span class="number">1</span> &lt; right:  <span class="comment"># 区间不为空</span></span><br><span class="line">        mid = left + (right - left) // <span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> nums[mid] &lt; target:</span><br><span class="line">            left = mid  <span class="comment"># [mid+1, right]</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            right = mid  <span class="comment"># [left, mid)</span></span><br><span class="line">            <span class="keyword">return</span> right</span><br></pre></td></tr></table></figure>
 <h1 id="区间和"><a class="markdownIt-Anchor" href="#区间和"></a> 区间和</h1>
 <h2 id="前缀和"><a class="markdownIt-Anchor" href="#前缀和"></a> 前缀和</h2>
 <h2 id="树状数组"><a class="markdownIt-Anchor" href="#树状数组"></a> 树状数组</h2>
