@@ -1,10 +1,10 @@
 http://laptype.github.io/2021/09/13/hello-world/
-http://laptype.github.io/2022/10/27/test/pdf-test/
-http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/
 http://laptype.github.io/2021/09/14/Blog/%E8%AE%B0%E5%BD%959-14/
+http://laptype.github.io/2022/10/27/test/pdf-test/
 http://laptype.github.io/2023/11/14/Leetcode/leetcode-basic-alg/
 http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/
 http://laptype.github.io/2023/11/15/Leetcode/leetcode-math-skills/
 http://laptype.github.io/2023/11/14/Leetcode/leetcode_template/
+http://laptype.github.io/2021/10/18/AVR-delay-loop%E7%9A%84%E8%AE%A1%E7%AE%97/
 http://laptype.github.io/2022/11/08/ML&DL/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-%E8%81%9A%E7%B1%BB-k-means/
 http://laptype.github.io/2022/11/10/ML&DL/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0-PCA%E9%99%8D%E7%BB%B4/
