@@ -29,42 +29,6 @@
   </url>
   
   <url>
-    <loc>http://laptype.github.io/2023/11/27/Leetcode/leetcode-data-struct/</loc>
-    
-    <lastmod>2024-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/</loc>
-    
-    <lastmod>2024-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/15/Leetcode/leetcode-math-skills/</loc>
-    
-    <lastmod>2024-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://laptype.github.io/2023/11/24/Leetcode/leetcode-skills/</loc>
-    
-    <lastmod>2024-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://laptype.github.io/2024/01/18/study/win_tricks/</loc>
     
     <lastmod>2024-01-18</lastmod>
@@ -129,6 +93,42 @@
   
   <url>
     <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-basic-alg/</loc>
+    
+    <lastmod>2024-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/27/Leetcode/leetcode-data-struct/</loc>
+    
+    <lastmod>2024-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/</loc>
+    
+    <lastmod>2024-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/15/Leetcode/leetcode-math-skills/</loc>
+    
+    <lastmod>2024-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://laptype.github.io/2023/11/24/Leetcode/leetcode-skills/</loc>
     
     <lastmod>2024-01-18</lastmod>
     
