@@ -1,0 +1,10 @@
+http://laptype.github.io/2021/09/13/hello-world/
+http://laptype.github.io/2022/10/27/test/pdf-test/
+http://laptype.github.io/2023/11/30/Leetcode/cpp_stl/
+http://laptype.github.io/2023/11/14/Leetcode/leetcode-basic-alg/
+http://laptype.github.io/2023/11/27/Leetcode/leetcode-data-struct/
+http://laptype.github.io/2023/11/14/Leetcode/leetcode-graph/
+http://laptype.github.io/2023/11/15/Leetcode/leetcode-math-skills/
+http://laptype.github.io/2023/11/24/Leetcode/leetcode-skills/
+http://laptype.github.io/2024/01/18/study/win_tricks/
+http://laptype.github.io/2024/05/24/tricks/pdf_add_content/
